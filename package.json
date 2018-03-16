@@ -1,0 +1,19 @@
+{
+  "name": "pet-friendly-mexico",
+  "version": "1.0.0",
+  "description": "thesis project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HC18-Decoders/Pet-Friendly-Mexico.git"
+  },
+  "author": "Jorge, Alejando, Jackie, Jesse, Cesar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico/issues"
+  },
+  "homepage": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico#readme"
+}
