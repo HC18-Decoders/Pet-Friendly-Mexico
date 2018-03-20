@@ -4,7 +4,9 @@
   "description": "thesis project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,21 @@
   "bugs": {
     "url": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico/issues"
   },
-  "homepage": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico#readme"
+  "homepage": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "history": "^4.7.2",
+    "mysql2": "^1.5.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "6.24.1",
+    "webpack": "^4.1.1"
+  }
 }
