@@ -12,6 +12,12 @@ CREATE TABLE vetProfile(
   address TEXT
 );
 
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+
 CREATE TABLE petProfile(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name_pet varchar(255) NOT NULL,
@@ -21,3 +27,9 @@ CREATE TABLE petProfile(
   wormed_out BIT NOT NULL,
   short_description TEXT NOT NULL
 );
+
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
+INSERT INTO () VALUES ();
