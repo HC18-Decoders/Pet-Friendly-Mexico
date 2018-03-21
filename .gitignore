@@ -1,15 +1,4 @@
-# Compiled Dirs
-build/
-compiled/
-react-client/dist/bundle.js
-pic-gallery/
-
-## NPM ##
-node_modules
-
-## API keys ##
-## Mac OSX ##
-.DS_Store
+### node etc ###
 
 # Logs
 logs
@@ -25,3 +14,21 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Compiled Dirs (http://nodejs.org/api/addons.html)
+build/
+client/dist/bundle.js
+
+# Dependency directorys
+# Deployed apps should consider commenting these lines out:
+# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules/
+bower_components/
+passwords.js
+
+client/.DS_Store
+=======
+node_modules
