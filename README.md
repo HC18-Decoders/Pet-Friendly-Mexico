@@ -44,8 +44,8 @@ Please read [HolaCode.com](http://holacode.com/) for details on our contribution
 
 ## Acknowledgments
 
-A special thanks to Garima Batra for helping us with a lot of great ideas for our project.
-Also is a great pleasure to acknowledge Decoders team for the awsome job on working and contributing in this project.
+**A special thanks to Garima Batra for helping us with a lot of great ideas for our project.
+Also is a great pleasure to acknowledge Decoders team for the awsome job on working and contributing in this project, Jacqueline Lopez, Alejandro Rodríguez, Jorge Cervantes, Luis G. Nava, and Cesar Tapia.**
 
 
 
