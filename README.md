@@ -18,7 +18,7 @@ git clone https://github.com/HC18-Decoders/Pet-Friendly-Mexico.git
 ## Built With
 
 * [React](https://reactjs.org/) - React
-* [MySQL](https://www.mysql.com/) - MySQL  
+* [MySQL2](https://www.mysql2.com/) - MySQL2
 * [Express](http://expressjs.com/) - Express for Server Side
 
 ## Requirements
@@ -26,7 +26,7 @@ git clone https://github.com/HC18-Decoders/Pet-Friendly-Mexico.git
 - React 16.x
 - React Router 4.x
 - Node ^8.x
-- MySQL 9.1.x
+- MySQL2 9.1.x
 - Express 4.x
 - Material-UI 1.x
 
@@ -44,9 +44,8 @@ Please read [HolaCode.com](http://holacode.com/) for details on our contribution
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+A special thanks to Garima Batra for helping us with a lot of great ideas for our project.
+Also is a great pleasure to acknowledge Decoders team for the awsome job on working and contributing in this project.
 
 
 
