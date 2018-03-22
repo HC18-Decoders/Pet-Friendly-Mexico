@@ -1,0 +1,12 @@
+body{
+  margin: 0;
+  font-family: garamond;
+  font-size: 45px;
+  background-image: url(multicolorDog.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h2{
+  color: white;
+}
