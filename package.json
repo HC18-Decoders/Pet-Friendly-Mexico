@@ -15,9 +15,6 @@
   },
   "author": "Jorge, Alejando, Jackie, Jesse, Cesar",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico/issues"
-  },
   "homepage": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
