@@ -31,17 +31,28 @@ h1 {
   font-family: 'Lato';
   float: left;
   position: fixed;
-  margin-top: 2em;
-  margin-left: 1em;
+  margin-top: 16em;
+  margin-left: 10em;
   attachment: fixed;
 }
 
-.poo {
-  float: none;
-  margin-top: 16.8em;
+.serch-button {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+}
+
+/*Footer element starts here*/
+
+.foo {
+  color: white;
+  margin-top: 14em;
   margin-left: 7em;
   position: relative;
   attachment: fixed;
 }
+
+/*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/
