@@ -27,5 +27,6 @@ const getPetProfile = function() {
 };
 
 module.exports = {
-
-}
+  getVetProfile,
+  getPetProfile
+};
