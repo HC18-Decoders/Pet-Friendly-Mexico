@@ -10,15 +10,22 @@ const styles = {
     fontFamily: 'Lato',
     color: white,
     cursor: 'pointer'
+  },
+
+  button: {
+    color: white,
+    fontFamily: 'Lato',
+    fontSize: '36px'
   }
+
 };
 
 const Header = () => (
   <MuiThemeProvider>
-  <AppBar id="appBar"
+  <AppBar className="appBar"
     style={{backgroundColor: darkBlack}}
     title={<span style={styles.title}>Pet's Mexico</span>}
-    iconElementRight={<FlatButton label="Sign Up" />}
+    iconElementRight={<FlatButton className="signUp" label="Sign Up" style={styles.button} />}
   />
   </MuiThemeProvider>
 );
