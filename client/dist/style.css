@@ -1,12 +1,59 @@
-body{
+/*This styles section belong to Main Page*/
+
+body {
   margin: 0;
-  font-family: garamond;
+  font-family: 'Lato';
   font-size: 45px;
-  background-image: url(multicolorDog.jpeg);
+  background-image: url('multicolorDog.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-h2{
+
+h1 {
+  font-family: 'Lato';
+  font-size: 30px;
   color: white;
 }
+
+.signUp {
+  font-size: 28px;
+  float: right;
+}
+
+.appBar {
+  position: sticky;
+  attachment: sticky;
+}
+
+.serch {
+  font-size: 28px;
+  font-family: 'Lato';
+  float: left;
+  position: fixed;
+  margin-top: 16em;
+  margin-left: 10em;
+  attachment: fixed;
+}
+
+
+.serch-button {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+}
+
+/*Footer element starts here*/
+
+.foo {
+  color: white;
+  margin-top: 14em;
+  margin-left: 7em;
+  position: relative;
+  attachment: fixed;
+}
+
+/*Footer element ends here DO NOT TOUCH*/
+
+/*Main Page ends here*/
