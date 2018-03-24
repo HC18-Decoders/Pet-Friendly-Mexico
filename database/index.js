@@ -3,7 +3,7 @@ const mysqlConfig = require('./config.js');
 
 const connection = mysql.createConnection(mysqlConfig);
 
-const vetPetProfile = function() {
+const getVetProfile = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM vetProfile', (err, data) => {
       if(err) {
@@ -13,3 +13,19 @@ const vetPetProfile = function() {
     })
   })
 };
+
+
+const getPetProfile = function() {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM petProfile', (err, data) => {
+      if(err){
+        return reject(err);
+      }
+      return resolve(data);
+    })
+  })
+};
+
+module.exports = {
+
+}
