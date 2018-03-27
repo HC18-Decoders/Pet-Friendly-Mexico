@@ -18,6 +18,7 @@
   "license": "ISC",
   "homepage": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
@@ -34,7 +35,7 @@
     "material-ui": "^0.20.0",
     "mysql2": "^1.5.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^15.4.2",
     "react-router-dom": "^4.2.2",
     "webpack": "^2.2.1",
     "webpack-cli": "^2.0.12",
