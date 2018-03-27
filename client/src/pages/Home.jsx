@@ -1,7 +1,7 @@
 import React from "react";
 
-import Header from './home/Header.jsx';
-import Search from './home/Search.jsx';
+import Header from '../home/Header.jsx';
+import Search from '../home/Search.jsx';
 
 
 
