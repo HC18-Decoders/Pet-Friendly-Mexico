@@ -3,7 +3,7 @@ const url = require('url');
 //const path = require('path');
 
 
-export.getVetProfile = (req, res) => {
+exports.getVetProfile = (req, res) => {
   db.getVetProfile()
     .then(data => {
       res.status(200).send(data)
@@ -12,7 +12,7 @@ export.getVetProfile = (req, res) => {
 }
 
 
-export.getPetProfile = (req, res) => {
+exports.getPetProfile = (req, res) => {
   db.getPetProfile()
     .then(data => {
       res.status(200).send(data)
