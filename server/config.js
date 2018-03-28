@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/signUp', route.getSignUp)
 
-app.get('/logIn', route.getLogIn)
+app.get('/logIns', route.getLogIn)
 
 app.get('/vetProfile', route.getVetProfile)
 

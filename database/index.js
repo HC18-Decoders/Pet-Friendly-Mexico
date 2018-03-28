@@ -14,7 +14,7 @@ const getSignUp = function() {
   })
 };
 
-const getLogIn = function() {
+const getLogIns = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM logIn', (err, data) => {
       if(err) {
