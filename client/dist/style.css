@@ -31,17 +31,21 @@ h1 {
   font-family: 'Lato';
   float: left;
   position: fixed;
-  margin-top: 16em;
+  margin-top: 15em;
   margin-left: 10em;
   attachment: fixed;
 }
 
 
-.serch-button {
+.serch-box {
   font-size: 1.25em;
   font-weight: 700;
   color: white;
   background-color: black;
+}
+
+.serchbutton {
+  
 }
 
 /*Footer element starts here*/

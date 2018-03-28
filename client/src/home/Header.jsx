@@ -5,6 +5,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton';
 import {darkBlack, white} from 'material-ui/styles/colors';
 
+
 const styles = {
   title: {
     fontFamily: 'Lato',
@@ -22,12 +23,12 @@ const styles = {
 
 const Header = () => (
   <MuiThemeProvider>
+
   <AppBar className="appBar"
     style={{backgroundColor: darkBlack}}
     title={<span style={styles.title}>Pet's Mexico</span>}
     iconElementRight={<FlatButton className="signUp" label="Sign Up" style={styles.button} />}
   />
-    <h1>すべての死体は死にきれているわけではない。人々はそれらを殺し、そしてまた起き上がってころす。</h1>
   </MuiThemeProvider>
 );
 
