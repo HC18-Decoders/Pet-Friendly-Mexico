@@ -12,6 +12,8 @@ app.get('/', route.)
 
 app.get('/signUp', route.getSignUp)
 
+app.get('/logIn', route.getLogIn)
+
 app.get('/vetProfile', route.getVetProfile)
 
 app.get('/petProfile', route.getPetProfile)

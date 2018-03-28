@@ -14,6 +14,17 @@ const getSignUp = function() {
   })
 };
 
+const getLogIn = function() {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM logIn', (err, data) => {
+      if(err) {
+        return reject(err);
+      }
+      return resolve(data);
+    })
+  })
+};
+
 const getVetProfile = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM vetProfile', (err, data) => {
@@ -38,6 +49,8 @@ const getPetProfile = function() {
 };
 
 module.exports = {
+  getSignUp,
+  getLogIn,
   getVetProfile,
   getPetProfile
 };
