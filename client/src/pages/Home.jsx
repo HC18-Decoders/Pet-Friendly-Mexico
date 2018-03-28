@@ -14,10 +14,10 @@ export default class Home extends React.Component {
     return (
       <div>
         <div>
-          <Search />
+          <Header />
         </div>
         <div>
-          <Header />
+          <Search />
         </div>
         <div>
           <footer className="foo">¡Hola! ¿Qué estás buscando?</footer>
