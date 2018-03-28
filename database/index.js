@@ -38,6 +38,7 @@ const getPetProfile = function() {
 };
 
 module.exports = {
+  getSignUp,
   getVetProfile,
   getPetProfile
 };
