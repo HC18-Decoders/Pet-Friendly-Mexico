@@ -8,10 +8,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
-// app.get('/', route.)
+app.get('/', route.)
 
-// app.get('/vetProfile', route.getVetProfile)
-//
-// app.get('/petProfile', route.getPetProfile)
+app.get('/signUp', route.getSignUp)
+
+app.get('/vetProfile', route.getVetProfile)
+
+app.get('/petProfile', route.getPetProfile)
 
 module.exports = app;
