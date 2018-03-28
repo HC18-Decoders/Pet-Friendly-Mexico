@@ -28,6 +28,7 @@ const Header = () => (
     style={{backgroundColor: darkBlack}}
     title={<span style={styles.title}>Pet's Mexico</span>}
     iconElementRight={<FlatButton className="signUp" label="Sign Up" style={styles.button} />}
+    iconElementRight={<FlatButton className="logIn" label="Log In" style={styles.button} />}
   />
   </MuiThemeProvider>
 );
