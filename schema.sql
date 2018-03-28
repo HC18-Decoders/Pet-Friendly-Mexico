@@ -4,6 +4,19 @@ CREATE DATABASE profiles;
 
 use profiles;
 
+CREATE TABLE signUp(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email varchar(50) NOT NULL,
+  user_name varchar(20) NOT NULL,
+  password varchar(20) NOT NULL
+);
+
+INSERT INTO signUp(email, user_name, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
+INSERT INTO signUp(email, user_name, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
+INSERT INTO signUp(email, user_name, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
+INSERT INTO signUp(email, user_name, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
+INSERT INTO signUp(email, user_name, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
+
 CREATE TABLE vetProfile(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first_name varchar(255) NOT NULL,
