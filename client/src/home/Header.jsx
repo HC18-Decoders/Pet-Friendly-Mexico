@@ -5,6 +5,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton';
 import {darkBlack, white} from 'material-ui/styles/colors';
 
+
 const styles = {
   title: {
     fontFamily: 'Lato',
@@ -22,6 +23,7 @@ const styles = {
 
 const Header = () => (
   <MuiThemeProvider>
+
   <AppBar className="appBar"
     style={{backgroundColor: darkBlack}}
     title={<span style={styles.title}>Pet's Mexico</span>}
