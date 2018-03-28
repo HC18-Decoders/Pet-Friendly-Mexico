@@ -4,11 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton';
 import {darkBlack, white} from 'material-ui/styles/colors';
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-} from 'react-router-dom';
+
 
 const styles = {
   title: {
@@ -26,24 +22,14 @@ const styles = {
 };
 
 const Header = () => (
-  <Router>
   <MuiThemeProvider>
-    <div>
+
   <AppBar className="appBar"
     style={{backgroundColor: darkBlack}}
     title={<span style={styles.title}>Pet's Mexico</span>}
     iconElementRight={<FlatButton className="signUp" label="Sign Up" style={styles.button} />}
-<<<<<<< HEAD
   />
-=======
-        />
-</div>
-<div>
-    <Link to="/">Home</Link>
-</div>
->>>>>>> master
   </MuiThemeProvider>
-</Router>
 );
 
 export default Header;

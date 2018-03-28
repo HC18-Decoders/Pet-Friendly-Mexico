@@ -18,6 +18,7 @@
   "license": "ISC",
   "homepage": "https://github.com/HC18-Decoders/Pet-Friendly-Mexico#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
