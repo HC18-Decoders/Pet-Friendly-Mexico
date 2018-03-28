@@ -12,7 +12,7 @@ exports.getSignUp = (req, res) => {
 }
 
 
-exports.getLogIns = (req, res) => {
+exports.getLogIn = (req, res) => {
   db.getLogIn()
     .then(data => {
       res.status(200).send(data)
