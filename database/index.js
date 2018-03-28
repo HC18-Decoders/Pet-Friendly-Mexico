@@ -14,6 +14,7 @@ const getSignUp = function() {
   })
 };
 
+
 const getLogIn = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM logIn', (err, data) => {
@@ -24,6 +25,7 @@ const getLogIn = function() {
     })
   })
 };
+
 
 const getVetProfile = function() {
   return new Promise((resolve, reject) => {

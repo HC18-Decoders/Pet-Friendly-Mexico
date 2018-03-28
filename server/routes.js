@@ -21,6 +21,7 @@ exports.getLogIn = (req, res) => {
 }
 
 
+
 exports.getVetProfile = (req, res) => {
   db.getVetProfile()
     .then(data => {
