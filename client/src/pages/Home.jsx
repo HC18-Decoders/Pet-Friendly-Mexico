@@ -26,7 +26,7 @@ export default class Home extends React.Component {
           <Header />
         </div>
         <div>
-          <footer className="foo">Hi! What are you looking for?</footer>
+          <footer className="foo">¡Hola! ¿Qué estás buscando?</footer>
         </div>
       </div>
     );
