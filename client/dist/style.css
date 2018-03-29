@@ -48,7 +48,10 @@ h1 {
   background-color: black;
 }
 
-.serchbutton {}
+.serchbutton {
+
+}
+
 
 /*Footer element starts here*/
 
@@ -63,3 +66,14 @@ h1 {
 /*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/
+
+
+/*id tag for vetprofile component*/
+#vetsFN{
+  color: white;
+  font-style: italic;
+  font-size: 30px;
+  text-decoration: underline;
+  outline: thin ridge green;
+}
+
