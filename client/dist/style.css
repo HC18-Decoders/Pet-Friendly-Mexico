@@ -21,6 +21,10 @@ h1 {
   float: right;
 }
 
+.logIn {
+  font-size: 28px;
+}
+
 .appBar {
   position: sticky;
   attachment: sticky;
@@ -48,6 +52,7 @@ h1 {
 
 }
 
+
 /*Footer element starts here*/
 
 .foo {
@@ -71,3 +76,4 @@ h1 {
   text-decoration: underline;
   outline: thin ridge green;
 }
+
