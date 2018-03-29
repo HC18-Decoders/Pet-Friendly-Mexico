@@ -24,6 +24,8 @@ render() {
           <ToolbarGroup>
             <ToolbarTitle text="Pet's Mexico" />
             <ToolbarSeparator />
+            <RaisedButton label="Log In" />
+            <RaisedButton label="Sign Up" />
           </ToolbarGroup>
         </Toolbar>
   );
