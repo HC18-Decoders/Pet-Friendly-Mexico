@@ -25,10 +25,6 @@ h1 {
   font-size: 28px;
 }
 
-.appBar {
-  position: sticky;
-  attachment: sticky;
-}
 
 .serch {
   font-size: 28px;
@@ -49,7 +45,10 @@ h1 {
 }
 
 .serchbutton {
-
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  background-color: black;
 }
 
 
@@ -67,13 +66,12 @@ h1 {
 
 /*Main Page ends here*/
 
-
 /*id tag for vetprofile component*/
-#vetsFN{
+
+#vetsFN {
   color: white;
   font-style: italic;
   font-size: 30px;
   text-decoration: underline;
   outline: thin ridge green;
 }
-
