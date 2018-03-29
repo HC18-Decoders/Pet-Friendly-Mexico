@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 
+<<<<<<< HEAD
 
 app.get('/signUp', route.getSignUp)
 
@@ -17,6 +18,9 @@ app.get('/logIn', route.getLogIn)
 app.get('/signUp', route.getSignUp)
 
 app.get('/vetProfile', route.getVetProfile)
+=======
+app.get('/vetProfiles', route.getVetProfile)
+>>>>>>> 44-vetprofile
 
 app.get('/petProfile', route.getPetProfile)
 
