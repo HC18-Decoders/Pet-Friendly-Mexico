@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Profile from "./CreateProfile.jsx";
 
 export default class VetProfile extends React.Component {
   constructor(props) {
@@ -40,6 +40,9 @@ export default class VetProfile extends React.Component {
     return(
       <div>
         <div>
+          <div>
+            <Profile />
+          </div>
         <Switch>
           <Route exact path={this.props.match.path}
             render={(props) => <VetLayout {...props} data={this.state} /> } />
