@@ -20,6 +20,22 @@ export default class VetProfile extends React.Component {
       });
   }
 
+  postVetProfiles(firstName, lastName, phoneNumber, address) {
+    axios.post('/vetProfiles', {
+      firstName: firstName,
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+      address: address
+    })
+    .then(() => {
+      this.getVetProfile
+    })
+  }
+
+  ComponentDidMount() {
+    this.getVetProfile();
+  }
+
   render(){
     return(
       <div>
@@ -33,3 +49,5 @@ export default class VetProfile extends React.Component {
     )
   }
 };
+
+//firstName, lastName, phoneNumber, address
