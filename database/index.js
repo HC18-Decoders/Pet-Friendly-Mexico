@@ -28,10 +28,10 @@ const getLogIn = function() {
 };
 
 
-const postVetProfile = function() {
+const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
   return new Promise((resolove, reject) => {
-    connection.query('INSERT INTO vetProfile(first_name, last_name, phone_number, address) VALUES (?, ?, ?, ?)',
-      [], (err, data) => {
+    connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
+      [firstName, lastName, phoneNumber, address], (err, data) => {
         if(err) {
           return reject(err);
         }
@@ -41,9 +41,9 @@ const postVetProfile = function() {
 };
 
 
-const getVetProfile = function() {
+const getVetProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfile', (err, data) => {
+    connection.query('SELECT * FROM vetProfiles', (err, data) => {
       if(err) {
         return reject(err);
       }
@@ -53,22 +53,11 @@ const getVetProfile = function() {
 };
 
 
-const postPetProfile = function() {
-  return new Promise((resolve, data) => {
-    connection.query('INSTER INTO () VALUES (?, ?, ?, ?, ?, ?)',
-      [], (err, data) => {
-        if(err) {
-          return reject(err);
-        }
-        return resolve(data);
-      })
-  })
-};
 
 
-const getPetProfile = function() {
+const getPetProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM petProfile', (err, data) => {
+    connection.query('SELECT * FROM petProfiles', (err, data) => {
       if(err){
         return reject(err);
       }
@@ -76,6 +65,18 @@ const getPetProfile = function() {
     })
   })
 };
+
+/*const postPetProfiles = function() {
+return new Promise((resolve, data) => {
+connection.query('INSTER INTO () VALUES (?, ?, ?, ?, ?, ?)',
+[], (err, data) => {
+if(err) {
+return reject(err);
+}
+return resolve(data);
+})
+})
+};*/
 
 module.exports = {
   getSignUp,
