@@ -13,8 +13,7 @@ render(){
   return(
   <div className="serch">
     Search   <input className="serch-box"></input>
-  <button className="serch-button">Go!</button>
-
+  <button id="serch-button" color="black">Go!</button>
   </div>
 );
 }
