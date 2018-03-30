@@ -13,21 +13,19 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 3,
-    };
+    }
   }
 
-
-render() {
- return(
-  <Toolbar>
+  render() {
+    return(
+      <Toolbar style={{backgroundColor:darkBlack}}>
           <ToolbarGroup>
-            <ToolbarTitle text="Pet's Mexico" />
+            <ToolbarTitle text="Pet's Mexico" style={{color:white}}/>
             <ToolbarSeparator />
-            <RaisedButton label="Log In" />
-            <RaisedButton label="Sign Up" />
+            <RaisedButton label="Log In" style={{right: -895}} />
+            <RaisedButton label="Sign Up" style={{left: 630}} />
           </ToolbarGroup>
         </Toolbar>
   );
- }
+}
 }
