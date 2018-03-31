@@ -16,13 +16,17 @@ export default class Header extends React.Component {
     }
   }
 
+  handleClick() {
+    console.log('this is:', this);
+  }
+
   render() {
     return(
       <Toolbar style={{backgroundColor:darkBlack}}>
           <ToolbarGroup>
             <ToolbarTitle text="Pet's Mexico" style={{color:white}}/>
             <ToolbarSeparator />
-            <RaisedButton label="Log In" style={{right: -895}} />
+            <RaisedButton onCLick={(e) => this.handleClick(e)} label="Log In" style={{right: -895}} />
             <RaisedButton label="Sign Up" style={{left: 630}} />
           </ToolbarGroup>
         </Toolbar>

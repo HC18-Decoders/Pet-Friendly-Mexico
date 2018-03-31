@@ -15,10 +15,10 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 //app.get('/logIn', route.getLogIn)
 
-app.get('/vetProfiles', route.getVetProfile)
-
-app.get('/petProfiles', route.getPetProfile)
-
-app.post('vetProfiles', route.vetProfiles)
+// app.get('/vetProfiles', route.getVetProfile)
+//
+// app.get('/petProfiles', route.getPetProfile)
+//
+// app.post('vetProfiles', route.vetProfiles)
 
 module.exports = app;

@@ -41,15 +41,16 @@ exports.getPetProfiles = (req, res) => {
 }
 
 
-exports.postVetProfiles(req, res) {
-  var firstName = req.body.firstName;
-  var lastName = req.body.lastName;
-  var phoneNumber = req.body.phoneNumber;
-  var address = req.body.address;
-  db.postVetProfiles(firstName, lastName, phoneNumber, address)
-  .then(data => {
-    res.status(200).send(data)
-  })
-  .catch(err => { console.log(err) })
-}
+// exports.postVetProfiles = (req, res) => {
+//   let firstName = req.body.firstName;
+//   let lastName = req.body.lastName;
+//   let phoneNumber = req.body.phoneNumber;
+//   let address = req.body.address;
+//   db.postVetProfiles(firstName, lastName, phoneNumber, address)
+//   .then(data => {
+//     res.status(200).send(data)
+//   })
+//   .catch(err => { console.log(err) })
+// };
+
 // /firstName, lastName, phoneNumber, address

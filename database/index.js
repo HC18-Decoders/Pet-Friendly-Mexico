@@ -3,7 +3,6 @@ const mysqlConfig = require('./config.js');
 
 const connection = mysql.createConnection(mysqlConfig);
 
-
 const getSignUp = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM signUp', (err, data) => {
@@ -28,22 +27,9 @@ const getLogIn = function() {
 };
 
 
-const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
-  return new Promise((resolove, reject) => {
-    connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
-      [firstName, lastName, phoneNumber, address], (err, data) => {
-        if(err) {
-          return reject(err);
-        }
-        return resolve(data);
-      })
-  })
-};
-
-
-const getVetProfiles = function() {
+const getVetProfile = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfiles', (err, data) => {
+    connection.query('SELECT * FROM vetProfile', (err, data) => {
       if(err) {
         return reject(err);
       }
@@ -53,11 +39,9 @@ const getVetProfiles = function() {
 };
 
 
-
-
-const getPetProfiles = function() {
+const getPetProfile = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM petProfiles', (err, data) => {
+    connection.query('SELECT * FROM petProfile', (err, data) => {
       if(err){
         return reject(err);
       }
@@ -65,18 +49,6 @@ const getPetProfiles = function() {
     })
   })
 };
-
-/*const postPetProfiles = function() {
-return new Promise((resolve, data) => {
-connection.query('INSTER INTO () VALUES (?, ?, ?, ?, ?, ?)',
-[], (err, data) => {
-if(err) {
-return reject(err);
-}
-return resolve(data);
-})
-})
-};*/
 
 module.exports = {
   getSignUp,
