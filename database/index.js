@@ -4,46 +4,21 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-// const getSignUp = function() {
-//   return new Promise((resolve, reject) => {
-//     connection.query('SELECT * FROM signUp', (err, data) => {
-//       if(err) {
-//         return reject(err);
-//       }
-//       return resolve(data);
-//     })
-//   })
-// };
-//
-//
-// const getLogIn = function() {
-//   return new Promise((resolve, reject) => {
-//     connection.query('SELECT * FROM logIn', (err, data) => {
-//       if(err) {
-//         return reject(err);
-//       }
-//       return resolve(data);
-//     })
-//   })
-// };
-
-
-const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
-  return new Promise((resolove, reject) => {
-    connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
-      [firstName, lastName, phoneNumber, address], (err, data) => {
-        if(err) {
-          return reject(err);
-        }
-        return resolve(data);
-      })
+const getSignUp = function() {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM signUp', (err, data) => {
+      if(err) {
+        return reject(err);
+      }
+      return resolve(data);
+    })
   })
 };
 
 
-const getVetProfiles = function() {
+const getLogIn = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfiles', (err, data) => {
+    connection.query('SELECT * FROM logIn', (err, data) => {
       if(err) {
         return reject(err);
       }
@@ -54,11 +29,10 @@ const getVetProfiles = function() {
 
 
 
-
-const getPetProfiles = function() {
+const getVetProfile = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM petProfiles', (err, data) => {
-      if(err){
+    connection.query('SELECT * FROM vetProfile', (err, data) => {
+      if(err) {
         return reject(err);
       }
       return resolve(data);
@@ -66,17 +40,17 @@ const getPetProfiles = function() {
   })
 };
 
-/*const postPetProfiles = function() {
-return new Promise((resolve, data) => {
-connection.query('INSTER INTO () VALUES (?, ?, ?, ?, ?, ?)',
-[], (err, data) => {
-if(err) {
-return reject(err);
-}
-return resolve(data);
-})
-})
-};*/
+
+const getPetProfile = function() {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM petProfile', (err, data) => {
+      if(err){
+        return reject(err);
+      }
+      return resolve(data);
+    })
+  })
+};
 
 module.exports = {
   getVetProfiles,

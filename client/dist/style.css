@@ -16,13 +16,26 @@ h1 {
   color: white;
 }
 
-.signUp {
-  font-size: 28px;
-  float: right;
+
+.toolBar {
+  position: sticky;
+  width: 100%;
 }
 
-.logIn {
+.signup {
   font-size: 28px;
+  position: sticky;
+  padding: 0;
+  color: white;
+  text-align: center;
+}
+
+.login {
+  font-size: 28px;
+  position: sticky;
+  padding: 0;
+  color: white;
+  text-align: center;
 }
 
 
@@ -44,7 +57,13 @@ h1 {
   background-color: black;
 }
 
-.serchbutton {}
+.serch-button {
+  font-size: 28px;
+  font-family: 'Lato';
+  color: white;
+  background-color: black;
+}
+
 
 /*Footer element starts here*/
 
