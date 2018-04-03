@@ -53,4 +53,17 @@ exports.postSingleVetProfile = (req, res) => {
   .catch(err => { console.log(err) })
 }
 
-// /firstName, lastName, phoneNumber, address
+
+exports.postSinglePetProfile = (req, res) => {
+  var petName = req.body.petName;
+  var age= req.body.age;
+  var breed = req.body.breed;
+  var vaccines = req.body.vaccines;
+  var dewormed = req.body.dewormed;
+  var smallDescription = req.body.smallDescription;
+  db.postPetProfiles(petName, age, breed, vaccines, dewormed, smallDescription)
+  .then(data => {
+    res.status(200).send(data)
+  })
+  .catch(err => { console.log(err) })
+}
