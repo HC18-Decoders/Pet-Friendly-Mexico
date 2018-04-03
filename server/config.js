@@ -20,9 +20,8 @@ app.get('/vetProfiles', route.getVet)
 
 app.get('/petProfiles', route.getPet)
 
+app.post('/vetProfiles', route.postSingleVetProfile)
 
-
-
-// app.post('vetProfiles', route.vetProfiles)
+app.post('/petProfiles', route.postSinglePetProfile)
 
 module.exports = app;
