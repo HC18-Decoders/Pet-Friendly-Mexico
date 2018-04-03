@@ -15,14 +15,10 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 //app.get('/logIn', route.getLogIn)
 
-<<<<<<< 702a37c4bcc563983b5205048c6c4c1ed1caf0a9
-app.get('/vetProfiles', route.getVetProfile)
-=======
-app.get('/vetProfile', route.getVetProfile)
->>>>>>> fixed all conflicts on server config file and style.css
+app.get('/vetProfiles', route.getVet)
 
-app.get('/petProfiles', route.getPetProfile)
+app.get('/petProfiles', route.getPet)
 
-app.post('vetProfiles', route.vetProfiles)
+// app.post('vetProfiles', route.vetProfiles)
 
 module.exports = app;
