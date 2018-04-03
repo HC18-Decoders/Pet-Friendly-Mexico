@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from "./CreateProfile.jsx";
+import axios from 'axios';
 
 export default class VetProfile extends React.Component {
   constructor(props) {
@@ -7,10 +7,14 @@ export default class VetProfile extends React.Component {
     this.state = {
       vet: []
     };
-
+    this.getVet = this.getVet.bind(this);
   }
 
-  getVetProfiles() {
+  ComponentDidMount() {
+    this.getVetProfile();
+  }
+
+  getVet() {
     axios.get('/vetProfiles')
       .then(data => {
         console.log(data);
@@ -20,29 +24,10 @@ export default class VetProfile extends React.Component {
       });
   }
 
-  postVetProfiles(firstName, lastName, phoneNumber, address) {
-    axios.post('/vetProfiles', {
-      firstName: firstName,
-      lastName: lastName,
-      phoneNumber: phoneNumber,
-      address: address
-    })
-    .then(() => {
-      this.getVetProfile
-    })
-  }
-
-  ComponentDidMount() {
-    this.getVetProfile();
-  }
-
   render(){
     return(
-      <div>
-        <div>
-          <div>
-            <Profile />
-          </div>
+      <div className="vet-sublayout">
+        <div className="vet-content">
         <Switch>
           <Route exact path={this.props.match.path}
             render={(props) => <VetLayout {...props} data={this.state} /> } />
@@ -52,5 +37,3 @@ export default class VetProfile extends React.Component {
     )
   }
 };
-
-//firstName, lastName, phoneNumber, address
