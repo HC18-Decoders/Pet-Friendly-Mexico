@@ -1,5 +1,5 @@
 import React from 'react';
-
+import axios from 'axios';
 
 export default class VetProfile extends React.Component {
   constructor(props) {
@@ -7,10 +7,14 @@ export default class VetProfile extends React.Component {
     this.state = {
       vet: []
     };
-
+    this.getVet = this.getVet.bind(this);
   }
 
-  getVetProfiles() {
+  ComponentDidMount() {
+    this.getVetProfile();
+  }
+
+  getVet() {
     axios.get('/vetProfiles')
       .then(data => {
         console.log(data);
@@ -22,8 +26,8 @@ export default class VetProfile extends React.Component {
 
   render(){
     return(
-      <div>
-        <div>
+      <div className="vet-sublayout">
+        <div className="vet-content">
         <Switch>
           <Route exact path={this.props.match.path}
             render={(props) => <VetLayout {...props} data={this.state} /> } />

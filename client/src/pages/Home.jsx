@@ -6,6 +6,7 @@ import Search from '../home/Search.jsx';
 import runtimeGenerator from 'regenerator-runtime/runtime';
 
 
+
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
