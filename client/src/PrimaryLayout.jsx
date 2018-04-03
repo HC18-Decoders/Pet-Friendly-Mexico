@@ -9,7 +9,7 @@ const PrimaryLayout = ({ match }) => (
     <main>
       <Switch>
         <Route exact path={`${match.path}`} component={Home} />
-        <Route path={`${match.url}VetProfile`} component={VetProfile} />
+        <Route path={`${match.url}vetProfiles`} component={VetProfile} />
       </Switch>
     </main>
   </div>
