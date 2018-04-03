@@ -4,13 +4,37 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton';
 import {darkBlack, white} from 'material-ui/styles/colors';
+import firebase from 'firebase';
+import {provider, auth} from '../config/client.js';
+import runtimeGenerator from 'regenerator-runtime/runtime';
+
 
 export default class Header extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      user: null
+    }
+    this.login=this.login.bind(this)
+    this.logout=this.logout.bind(this)
   }
+  async login() {
+    const result = await auth().signInWithPopup(provide)
+    this.setState({user: result.user});
+  }
+
+  async logout() {
+  await auth().signOut()
+   this.setState({user: null});
+ }
+
+ async componentWillMount() {
+   const user = await auth.onAuthStateChanged();
+   if (user) {
+     this.setState({user})
+ }
+}
 
   handleClick() {
     alert('This button was clicked');
@@ -22,8 +46,8 @@ export default class Header extends React.Component {
           <ToolbarGroup>
             <ToolbarTitle text="Pet's Mexico" style={{color:white}}/>
             <ToolbarSeparator />
-            <FlatButton className="login" onClick={(e) => this.handleClick(e)} label="Log In" style={{right: -805, color: white}} />
-            <FlatButton className="signup" onClick={(e) => this.handleClick(e)} label="Sign Up" style={{left: 780, color: white}} />
+            <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -805, color: white}} />
+            <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 780, color: white}} />
           </ToolbarGroup>
         </Toolbar>
   );
