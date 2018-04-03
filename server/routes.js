@@ -4,8 +4,27 @@ const path = require('path');
 const bodyParser = require ('body-parser');
 
 
-exports.getSignUp = (req, res) => {
-  db.getSignUp()
+// exports.getSignUp = (req, res) => {
+//   db.getSignUp()
+//     .then(data => {
+//       res.status(200).send(data)
+//     })
+//     .catch(err => { console.log(err) })
+// }
+//
+//
+// exports.getLogIn = (req, res) => {
+//   db.getLogIn()
+//     .then(data => {
+//       res.status(200).send(data)
+//     })
+//     .catch(err => { console.log(err) })
+// }
+
+
+
+exports.getVet = (req, res) => {
+  db.getVetProfiles()
     .then(data => {
       res.status(200).send(data)
     })
@@ -13,8 +32,8 @@ exports.getSignUp = (req, res) => {
 }
 
 
-exports.getLogIn = (req, res) => {
-  db.getLogIn()
+exports.getPet = (req, res) => {
+  db.getPetProfiles()
     .then(data => {
       res.status(200).send(data)
     })
@@ -22,26 +41,7 @@ exports.getLogIn = (req, res) => {
 }
 
 
-
-exports.getVetProfiles = (req, res) => {
-  db.getVetProfile()
-    .then(data => {
-      res.status(200).send(data)
-    })
-    .catch(err => { console.log(err) })
-}
-
-
-exports.getPetProfiles = (req, res) => {
-  db.getPetProfile()
-    .then(data => {
-      res.status(200).send(data)
-    })
-    .catch(err => { console.log(err) })
-}
-
-
-exports.postVetProfiles(req, res) {
+exports.postSingleVetProfile = (req, res) => {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var phoneNumber = req.body.phoneNumber;

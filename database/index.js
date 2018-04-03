@@ -4,28 +4,28 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-const getSignUp = function() {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM signUp', (err, data) => {
-      if(err) {
-        return reject(err);
-      }
-      return resolve(data);
-    })
-  })
-};
-
-
-const getLogIn = function() {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM logIn', (err, data) => {
-      if(err) {
-        return reject(err);
-      }
-      return resolve(data);
-    })
-  })
-};
+// const getSignUp = function() {
+//   return new Promise((resolve, reject) => {
+//     connection.query('SELECT * FROM signUp', (err, data) => {
+//       if(err) {
+//         return reject(err);
+//       }
+//       return resolve(data);
+//     })
+//   })
+// };
+//
+//
+// const getLogIn = function() {
+//   return new Promise((resolve, reject) => {
+//     connection.query('SELECT * FROM logIn', (err, data) => {
+//       if(err) {
+//         return reject(err);
+//       }
+//       return resolve(data);
+//     })
+//   })
+// };
 
 
 const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
@@ -79,8 +79,7 @@ return resolve(data);
 };*/
 
 module.exports = {
-  getSignUp,
-  getLogIn,
-  getVetProfile,
-  getPetProfile
+  getVetProfiles,
+  getPetProfiles,
+  postVetProfiles
 };
