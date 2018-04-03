@@ -12,7 +12,7 @@ class Search extends React.Component {
 render(){
   return(
   <div className="serch">
-    Search   <input className="serch-box"></input>
+    Búsqueda  <input className="serch-box"></input>
   <button className="serch-button">Go!</button>
 
   </div>
