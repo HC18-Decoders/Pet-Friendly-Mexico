@@ -4,32 +4,32 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-const getSignUp = function() {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM signUp', (err, data) => {
-      if(err) {
-        return reject(err);
-      }
-      return resolve(data);
-    })
-  })
-};
+// const getSignUp = function() {
+//   return new Promise((resolve, reject) => {
+//     connection.query('SELECT * FROM signUp', (err, data) => {
+//       if(err) {
+//         return reject(err);
+//       }
+//       return resolve(data);
+//     })
+//   })
+// };
+//
+//
+// const getLogIn = function() {
+//   return new Promise((resolve, reject) => {
+//     connection.query('SELECT * FROM logIn', (err, data) => {
+//       if(err) {
+//         return reject(err);
+//       }
+//       return resolve(data);
+//     })
+//   })
+// };
+//
 
 
-const getLogIn = function() {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM logIn', (err, data) => {
-      if(err) {
-        return reject(err);
-      }
-      return resolve(data);
-    })
-  })
-};
-
-
-
-const getVetProfile = function() {
+const getVetProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM vetProfile', (err, data) => {
       if(err) {
@@ -41,7 +41,7 @@ const getVetProfile = function() {
 };
 
 
-const getPetProfile = function() {
+const getPetProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM petProfile', (err, data) => {
       if(err){
@@ -50,6 +50,19 @@ const getPetProfile = function() {
       return resolve(data);
     })
   })
+};
+
+
+const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
+ return new Promise((resolove, reject) => {
+   connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
+     [firstName, lastName, phoneNumber, address], (err, data) => {
+       if(err) {
+         return reject(err);
+       }
+       return resolve(data);
+     })
+ })
 };
 
 module.exports = {
