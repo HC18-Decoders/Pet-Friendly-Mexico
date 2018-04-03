@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 
+
 // 
 // app.get('/signUp', route.getSignUp)
 //
@@ -19,6 +20,9 @@ app.use(express.static(__dirname + '/../client/dist'));
 //
 // app.get('/petProfiles', route.getPetProfile)
 //
+
+
+
 // app.post('vetProfiles', route.vetProfiles)
 
 module.exports = app;

@@ -10,6 +10,19 @@ export default class Profile extends React.Component {
       this.state = {};
     };
 
+
+    postVetProfiles(firstName, lastName, phoneNumber, address) {
+      axios.post('/vetProfiles', {
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        address: address
+      })
+      .then(() => {
+        this.getVetProfile
+      })
+    }
+
   render() {
   return (
     <div>
