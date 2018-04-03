@@ -44,6 +44,10 @@ h1 {
   background-color: black;
 }
 
+<<<<<<< 702a37c4bcc563983b5205048c6c4c1ed1caf0a9
+=======
+.serchbutton {}
+>>>>>>> fixed all conflicts on server config file and style.css
 
 /*Footer element starts here*/
 
@@ -58,6 +62,7 @@ h1 {
 /*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/
+<<<<<<< 702a37c4bcc563983b5205048c6c4c1ed1caf0a9
 
 /*id tag for vetprofile component*/
 
@@ -68,3 +73,5 @@ h1 {
   text-decoration: underline;
   outline: thin ridge green;
 }
+=======
+>>>>>>> fixed all conflicts on server config file and style.css
