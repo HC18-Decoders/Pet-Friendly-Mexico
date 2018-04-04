@@ -20,7 +20,7 @@ export default class Header extends React.Component {
     this.logout=this.logout.bind(this)
   }
   async login() {
-    const result = await auth().signInWithPopup(provide)
+    const result = await auth().signInWithPopup(provider)
     this.setState({user: result.user});
   }
 
