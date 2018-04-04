@@ -39,7 +39,7 @@ h1 {
 }
 
 
-.serch {
+.search {
   font-size: 28px;
   font-family: 'Lato';
   float: left;
@@ -50,14 +50,14 @@ h1 {
 }
 
 
-.serch-box {
+.search-box {
   font-size: 1.25em;
   font-weight: 700;
   color: white;
   background-color: black;
 }
 
-.serch-button {
+.search-button {
   font-size: 28px;
   font-family: 'Lato';
   color: white;
