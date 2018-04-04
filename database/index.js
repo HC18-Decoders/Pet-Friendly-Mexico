@@ -29,9 +29,9 @@ const connection = mysql.createConnection(mysqlConfig);
 //
 
 
-const getVetProfiles = function() {
+const getServiceProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfile', (err, data) => {
+    connection.query('SELECT * FROM serviceProfile', (err, data) => {
       if(err) {
         return reject(err);
       }
@@ -53,9 +53,9 @@ const getPetProfiles = function() {
 };
 
 
-const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
+const postServiceProfiles = function(firstName, lastName, phoneNumber, address) {
  return new Promise((resolove, reject) => {
-   connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
+   connection.query('INSERT INTO serviceProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
      [firstName, lastName, phoneNumber, address], (err, data) => {
        if(err) {
          return reject(err);
@@ -66,7 +66,7 @@ const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
 };
 
 module.exports = {
-  getVetProfiles,
+  getServiceProfiles,
   getPetProfiles,
-  postVetProfiles
+  postServiceProfiles
 };
