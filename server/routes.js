@@ -23,8 +23,8 @@ const bodyParser = require ('body-parser');
 
 
 
-exports.getService = (req, res) => {
-  db.getServiceProfiles()
+exports.getVet = (req, res) => {
+  db.getVetProfiles()
     .then(data => {
       res.status(200).send(data)
     })
@@ -41,12 +41,12 @@ exports.getPet = (req, res) => {
 }
 
 
-exports.postSingleServiceProfile = (req, res) => {
+exports.postSingleVetProfile = (req, res) => {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var phoneNumber = req.body.phoneNumber;
   var address = req.body.address;
-  db.postServiceProfiles(firstName, lastName, phoneNumber, address)
+  db.postVetProfiles(firstName, lastName, phoneNumber, address)
   .then(data => {
     res.status(200).send(data)
   })

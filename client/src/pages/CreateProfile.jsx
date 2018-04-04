@@ -11,15 +11,15 @@ export default class Profile extends React.Component {
     };
 
 
-    postServiceProfiles(firstName, lastName, phoneNumber, address) {
-      axios.post('/serviceProfiles', {
+    postVetProfiles(firstName, lastName, phoneNumber, address) {
+      axios.post('/vetProfiles', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
         address: address
       })
       .then(() => {
-        this.getServiceProfile
+        this.getVetProfile
       })
     }
 
