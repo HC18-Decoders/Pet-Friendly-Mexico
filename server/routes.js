@@ -24,7 +24,7 @@ const bodyParser = require ('body-parser');
 
 
 exports.getVet = (req, res) => {
-  db.getVetProfiles()
+  db.getServicesProfiles()
     .then(data => {
       res.status(200).send(data)
     })
@@ -41,7 +41,7 @@ exports.getPet = (req, res) => {
 }
 
 
-exports.postSingleVetProfile = (req, res) => {
+exports.postSingleServicesProfiles = (req, res) => {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var phoneNumber = req.body.phoneNumber;
@@ -54,7 +54,7 @@ exports.postSingleVetProfile = (req, res) => {
 }
 
 
-exports.postSinglePetProfile = (req, res) => {
+/*exports.postSinglePetProfile = (req, res) => {
   var petName = req.body.petName;
   var age= req.body.age;
   var breed = req.body.breed;
@@ -66,4 +66,4 @@ exports.postSinglePetProfile = (req, res) => {
     res.status(200).send(data)
   })
   .catch(err => { console.log(err) })
-}
+}*/

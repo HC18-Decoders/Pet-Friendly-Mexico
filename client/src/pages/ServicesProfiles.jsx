@@ -14,7 +14,7 @@ export default class Services extends React.Component {
         firstName: '',
         lastName: '',
         phoneNumber: '',
-        address: ''
+        address: '',
       };
     };
 
