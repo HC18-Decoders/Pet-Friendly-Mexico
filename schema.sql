@@ -5,7 +5,7 @@ CREATE DATABASE profiles;
 use profiles;
 
 
-CREATE TABLE servicesProfiles(
+CREATE TABLE vetProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   firstName varchar(255) NOT NULL,
   lastName varchar(255) NOT NULL,
@@ -13,11 +13,11 @@ CREATE TABLE servicesProfiles(
   address TEXT
 );
 
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Marcella', 'Torres', '5540208533', '123 Test St., Testing, TS, 12345');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Alenjandro', 'Rodriguez', '5523164288', '456 Tested Ave., Tester, TS,67890');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jacqueline', 'Romero', '5534668497', '789 W. Test Rd., Approved, TS, 54721');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jesse', 'Nava', '5521224558', '109 E. Testing Way, Testing, TS, 87534');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jack', 'Cervantes', '5519814312', '22 Tester Rd., Tests, TS, 38943');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Marcella', 'Torres', '5540208533', '123 Test St., Testing, TS, 12345');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Alenjandro', 'Rodriguez', '5523164288', '456 Tested Ave., Tester, TS,67890');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jacqueline', 'Romero', '5534668497', '789 W. Test Rd., Approved, TS, 54721');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jesse', 'Nava', '5521224558', '109 E. Testing Way, Testing, TS, 87534');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jack', 'Cervantes', '5519814312', '22 Tester Rd., Tests, TS, 38943');
 
 CREATE TABLE petProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

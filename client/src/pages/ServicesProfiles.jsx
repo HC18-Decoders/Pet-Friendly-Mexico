@@ -27,7 +27,7 @@ export default class Services extends React.Component {
         address: address
       })
       .then(() => {
-        this.postVetProfiles();
+        this.postServicesProfiles();
       })
     }
 
@@ -37,7 +37,7 @@ export default class Services extends React.Component {
 
 
     componentDidMount() {
-      this.postVetProfiles();
+      this.postServicesProfiles();
     }
 
 
