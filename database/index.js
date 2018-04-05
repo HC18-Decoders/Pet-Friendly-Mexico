@@ -1,6 +1,5 @@
 const mysql = require('mysql2');
 const mysqlConfig = require('./config.js');
-
 const connection = mysql.createConnection(mysqlConfig);
 
 
@@ -53,20 +52,32 @@ const getPetProfiles = function() {
 };
 
 
-const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
- return new Promise((resolove, reject) => {
-   connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
-     [firstName, lastName, phoneNumber, address], (err, data) => {
-       if(err) {
-         return reject(err);
-       }
-       return resolve(data);
-     })
- })
-};
+    const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
+      return new Promise((resolove, reject) => {
+      connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES(?,?,?,?)', [firstName, lastName, phoneNumber, address], (err, data) => {
+          if (err) {
+            return reject(err);
+          }
+          return resolve(data);
+        })
+      })
+    };
+
+
+const postPetProfiles = function(firstName, lastName, phoneNumber, address) {
+  return new Promise((resolove, reject) => {
+  connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES (?,?,?,?,?,?)', [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
+          if (err) {
+            return reject(err);
+          }
+          return resolve(data);
+        })
+      })
+    };
 
 module.exports = {
   getVetProfiles,
   getPetProfiles,
-  postVetProfiles
+  postVetProfiles,
+  postPetProfiles
 };

@@ -10,9 +10,15 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 //GET routing
 
+
+
 app.get('/searchresults', route.getVet)
 
-app.get('/petProfiles', route.getPet)
+app.get('/createProfile', route.getProfile)
+
+//POST requests
+
+app.post('/petProfile', route.postSinglePetProfile)
 
 
 
