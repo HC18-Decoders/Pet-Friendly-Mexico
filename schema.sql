@@ -34,3 +34,17 @@ INSERT INTO petProfiles (petName, age, breed, vaccines, dewormed, smallDescripti
 INSERT INTO petProfiles (petName, age, breed, vaccines, dewormed, smallDescription) VALUES ('Giggles', 1, 'French Poddle', 'Rabies, Parvovirus, Leptospirosis, and Lyme Disease', 'yes', 'Non-agressive, Well behaved, Freindly with kids');
 INSERT INTO petProfiles (petName, age, breed, vaccines, dewormed, smallDescription) VALUES ('Balu', 3, 'Schnouzer', 'Rabies, Parvovirus, Lyme Disease, Leptospirosis, and Distemper', 'yes', 'Agressive, Hyperactive, not friendly with kids');
 INSERT INTO petProfiles (petName, age, breed, vaccines, dewormed, smallDescription) VALUES ('Spike', 4, 'Doberman', 'Rabies, Lyme Disease, Distemper', 'no', 'Well behaved, Protective, Playful with kids');
+
+CREATE TABLE servicesProfiles(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  firstName varchar(255) NOT NULL,
+  lastName varchar (255) NOT NULL,
+  phoneNumber CHAR(20) NOT NULL,
+  address TEXT
+);
+
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Norma', 'Martinez', '5540204972', '123 Test St., Testing, TS, 12345');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Liz', 'Tapia', '5523169836', '456 Tested Ave., Tester, TS,67890');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd., Approved, TS, 54721');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way, Testing, TS, 87534');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd., Tests, TS, 38943');

@@ -79,7 +79,7 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, address)
 };*/
 
 module.exports = {
-  getServicesProfiles,
+  getVetProfiles,
   //getPetProfiles,
   postServicesProfiles,
   //postPetProfiles

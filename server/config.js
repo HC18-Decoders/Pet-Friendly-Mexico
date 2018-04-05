@@ -11,17 +11,12 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 
-
-// app.get('/signUp', route.getSignUp)
-//
-// app.get('/logIn', route.getLogIn)
-
 app.get('/vetProfiles', route.getSingleVetProfile)
 
 //app.get('/petProfiles', route.getPet)
 
-app.post('/serviceProfiles', route.postSingleServiceProfile)
-
 //app.post('/petProfiles', route.postSinglePetProfile)
+
+app.post('/servicesProfiles', route.postSinglServiceProfile)
 
 module.exports = app;
