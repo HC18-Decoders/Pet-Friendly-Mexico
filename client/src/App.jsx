@@ -8,13 +8,11 @@ import PrimaryLayout from "./PrimaryLayout.jsx";
 // import Header from './home/Header.jsx'
 class App extends React.Component {
   render() {
-    return (
-      <BrowserRouter>
-        <MuiThemeProvider>
-          <Route path="/" component={PrimaryLayout} />
-        </MuiThemeProvider>
-      </BrowserRouter>
-    )}
+    return (<BrowserRouter>
+      <MuiThemeProvider>
+        <Route path="/" component={Home}/>
+      </MuiThemeProvider>
+    </BrowserRouter>)
+  }
 };
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App/>, document.getElementById('app'));
