@@ -4,18 +4,6 @@ CREATE DATABASE profiles;
 
 use profiles;
 
-CREATE TABLE signUp(
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  email varchar(50) NOT NULL,
-  userName varchar(20) NOT NULL,
-  password varchar(20) NOT NULL
-);
-
-INSERT INTO signUp(email, userName, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
-INSERT INTO signUp(email, userName, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
-INSERT INTO signUp(email, userName, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
-INSERT INTO signUp(email, userName, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
-INSERT INTO signUp(email, userName, password) VALUES ('123_test@test.test', 'testuser20', 'testint123');
 
 CREATE TABLE vetProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
