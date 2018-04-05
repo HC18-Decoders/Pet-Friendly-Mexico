@@ -8,12 +8,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
+//GET routing
 
-// app.get('/signUp', route.getSignUp)
-//
-// app.get('/logIn', route.getLogIn)
 
-app.get('/vetProfiles', route.getVet)
+
+app.get('/searchresults', route.getVet)
 
 app.get('/createProfile', route.getProfile)
 
