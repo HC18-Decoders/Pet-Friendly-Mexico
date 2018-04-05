@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import {darkBlack, white} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
@@ -7,25 +9,34 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchInput: '',
+      value: '',
       searchResults: []
     }
-
+    this.handleClick = this.handleClick.bind(this);
   }
-handleClick() {
-  alert('Thank you for clicking me!');
+
+  handleClick() {
+
 }
 
-render(){
-  return(
-  <div className="search">
+  render(){
+    return(
+      <div className="search">
+        Búsqueda   <br></br>
+        <TextField className="search-box"
+                   floatingLabelText="Escribe el nombre del lugar..."
+                   underlineStyle="white"
+                   fullLength={true}
+                   style={{color:darkBlack}} />
+                 <Link to="/searchresults"><FlatButton onClick={(e) => this.handleClick(e)}
+                    label="Go!"
+                    className="search-button"
+                    style={{color:darkBlack}} />
+                </Link>
 
-    Búsqueda   <br></br><TextField className="search-box" floatingLabelText="Escribe el nombre del lugar..." underlineStyle="white" fullLength={true} style={{color:darkBlack}} />
-  <FlatButton onClick={(e) => this.handleClick(e)} label="Go!" className="search-button" style={{color:darkBlack}} />
-
-  </div>
-);
-}
+      </div>
+    );
+  }
 }
 
 export default Search;
