@@ -3,25 +3,7 @@ const url = require('url');
 const path = require('path');
 const bodyParser = require ('body-parser');
 
-
-// exports.getSignUp = (req, res) => {
-//   db.getSignUp()
-//     .then(data => {
-//       res.status(200).send(data)
-//     })
-//     .catch(err => { console.log(err) })
-// }
-//
-//
-// exports.getLogIn = (req, res) => {
-//   db.getLogIn()
-//     .then(data => {
-//       res.status(200).send(data)
-//     })
-//     .catch(err => { console.log(err) })
-// }
-
-
+//GET requests
 
 exports.getVet = (req, res) => {
   db.getVetProfiles()
@@ -40,6 +22,7 @@ exports.getPet = (req, res) => {
     .catch(err => { console.log(err) })
 }
 
+//POST requests
 
 exports.postSingleVetProfile = (req, res) => {
   var firstName = req.body.firstName;

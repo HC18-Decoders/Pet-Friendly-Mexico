@@ -31,7 +31,7 @@ const connection = mysql.createConnection(mysqlConfig);
 
 const getVetProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfile', (err, data) => {
+    connection.query('SELECT * FROM vetProfiles', (err, data) => {
       if(err) {
         return reject(err);
       }
@@ -43,7 +43,7 @@ const getVetProfiles = function() {
 
 const getPetProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM petProfile', (err, data) => {
+    connection.query('SELECT * FROM petProfiles', (err, data) => {
       if(err){
         return reject(err);
       }
