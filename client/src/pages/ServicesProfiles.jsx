@@ -3,25 +3,45 @@ import Avatar from 'material-ui/Avatar';
 import FontIcon from 'material-ui/FontIcon';
 import {darkBlack, white} from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
+import FlatButton from 'material-ui/FlatButton';
+import axios from 'axios';
 
-export default class Profile extends React.Component {
+
+export default class Services extends React.Component {
   constructor(props) {
     super(props);
-      this.state = {};
+      this.state = {
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        address: ''
+      };
     };
 
 
     postVetProfiles(firstName, lastName, phoneNumber, address) {
-      axios.post('/vetProfiles', {
+      axios.post('/', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
         address: address
       })
       .then(() => {
-        this.getVetProfile
+        this.postVetProfiles();
       })
     }
+
+    handleClick() {
+      alert('I am working');
+    }
+
+
+    componentDidMount() {
+      this.postVetProfiles();
+    }
+
+
+
 
   render() {
   return (
@@ -34,28 +54,23 @@ export default class Profile extends React.Component {
       />
     </div>
     <div>
-      <TextField title="Name" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+      <TextField title="firstName" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
         floatingLabelText="Nombre" />
     </div>
     <div>
-      <TextField title="Age" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Edad"  />
+      <TextField title="lastName" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Apellido"  />
     </div>
     <div>
-      <TextField title="Breed" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Raza" colors="darkBlack" />
+      <TextField title="phoneNumber" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Telefono" colors="darkBlack" />
     </div>
     <div>
-      <TextField title="Vaccines" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Vacunas" />
+      <TextField title="address" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Domicilio" />
     </div>
     <div>
-      <TextField title="Dewormed" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Desparasitación" />
-    </div>
-    <div>
-      <TextField title="smallDescription" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Descripción" />
+      <FlatButton onClick={(e) => this.handleClick(e)} label="Submit" style={{color: darkBlack}} />
     </div>
     </div>
   )
