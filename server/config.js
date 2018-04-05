@@ -9,16 +9,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
 
-
-
-
 // app.get('/signUp', route.getSignUp)
 //
 // app.get('/logIn', route.getLogIn)
 
 app.get('/vetProfiles', route.getVet)
 
-app.get('/petProfiles', route.getPet)
+app.get('/createProfile', route.getProfile)
+
+//POST requests
+
+app.post('/petProfile', route.postSinglePetProfile)
 
 
 
