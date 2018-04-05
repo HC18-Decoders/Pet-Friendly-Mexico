@@ -46,8 +46,8 @@ export default class Header extends React.Component {
           <ToolbarGroup>
             <ToolbarTitle text="Pet's Mexico" style={{color:white}}/>
             <ToolbarSeparator />
-            <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -805, color: white}} />
-            <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 780, color: white}} />
+            <FlatButton className="login" onClick={this.handleClick} label="Login with Facebook" style={{right: -705, color: white}} />
+            <FlatButton className="logOut" onClick={this.handleClick} label="Logout" style={{left: 680, color: white}} />
           </ToolbarGroup>
         </Toolbar>
   );
