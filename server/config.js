@@ -12,6 +12,14 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 
+app.get('/vetProfiles', route.getSingleVetProfile)
+
+//app.get('/petProfiles', route.getPet)
+
+//app.post('/petProfiles', route.postSinglePetProfile)
+
+app.post('/servicesProfiles', route.postSinglServiceProfile)
+
 app.get('/searchresults', route.getVet)
 
 app.get('/createProfile', route.getProfile)
@@ -19,8 +27,6 @@ app.get('/createProfile', route.getProfile)
 //POST requests
 
 app.post('/petProfile', route.postSinglePetProfile)
-
-
 
 
 // app.post('vetProfiles', route.vetProfiles)
