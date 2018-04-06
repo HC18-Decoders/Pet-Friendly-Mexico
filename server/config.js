@@ -14,13 +14,12 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/searchresults', route.getVet)
 
-app.get('/createProfile', route.getProfile)
 
 //POST requests
 
-app.post('/petProfile', route.postSinglePetProfile)
+app.post('/userprofile', route.postSinglePetProfile)
 
-
+app.post('/servicesprofile', route.postSingleVetProfile)
 
 
 // app.post('vetProfiles', route.vetProfiles)
