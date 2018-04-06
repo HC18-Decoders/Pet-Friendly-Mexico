@@ -22,7 +22,7 @@ h1 {
   width: 100%;
 }
 
-.signup {
+.logOut {
   font-size: 28px;
   position: sticky;
   padding: 0;
@@ -39,7 +39,7 @@ h1 {
 }
 
 
-.serch {
+.search {
   font-size: 28px;
   font-family: 'Lato';
   float: left;
@@ -50,14 +50,14 @@ h1 {
 }
 
 
-.serch-box {
+.search-box {
   font-size: 1.25em;
   font-weight: 700;
   color: white;
   background-color: black;
 }
 
-.serch-button {
+.search-button {
   font-size: 28px;
   font-family: 'Lato';
   color: white;
@@ -78,7 +78,6 @@ h1 {
 /*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/
-
 
 /*id tag for vetprofile component*/
 

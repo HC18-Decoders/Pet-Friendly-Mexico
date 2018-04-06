@@ -3,25 +3,7 @@ const url = require('url');
 const path = require('path');
 const bodyParser = require ('body-parser');
 
-
-// exports.getSignUp = (req, res) => {
-//   db.getSignUp()
-//     .then(data => {
-//       res.status(200).send(data)
-//     })
-//     .catch(err => { console.log(err) })
-// }
-//
-//
-// exports.getLogIn = (req, res) => {
-//   db.getLogIn()
-//     .then(data => {
-//       res.status(200).send(data)
-//     })
-//     .catch(err => { console.log(err) })
-// }
-
-
+//GET requests
 
 exports.getSingleVetProfile = (req, res) => {
   db.getVetProfiles()
@@ -40,6 +22,7 @@ exports.getSingleVetProfile = (req, res) => {
     .catch(err => { console.log(err) })
 }*/
 
+//POST requests
 
 exports.postSinglServiceProfile = (req, res) => {
   var firstName = req.body.firstName;
@@ -53,7 +36,6 @@ exports.postSinglServiceProfile = (req, res) => {
   .catch(err => { console.log(err) })
 }
 
-
 /*exports.postSinglePetProfile = (req, res) => {
   var petName = req.body.petName;
   var age= req.body.age;
@@ -61,9 +43,17 @@ exports.postSinglServiceProfile = (req, res) => {
   var vaccines = req.body.vaccines;
   var dewormed = req.body.dewormed;
   var smallDescription = req.body.smallDescription;
+  
+// /firstName, lastName, phoneNumber, address
+
+exports.postSinglePetProfile = (req, res) => {
+  let petName = req.body.petName;
+  let age = req.body.age;
+  let breed = req.body.breed;
+  let vaccines = req.body.vaccines;
+  let dewormed = req.body.dewormed;
+  let smallDescription = req.body.smallDescription;
   db.postPetProfiles(petName, age, breed, vaccines, dewormed, smallDescription)
   .then(data => {
     res.status(200).send(data)
   })
-  .catch(err => { console.log(err) })
-}*/
