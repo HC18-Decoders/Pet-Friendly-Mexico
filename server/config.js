@@ -22,13 +22,12 @@ app.post('/servicesProfiles', route.postSinglServiceProfile)
 
 app.get('/searchresults', route.getVet)
 
-app.get('/createProfile', route.getProfile)
 
 //POST requests
 
-app.post('/petProfile', route.postSinglePetProfile)
+app.post('/userprofile', route.postSinglePetProfile)
+
+app.post('/servicesprofile', route.postSingleVetProfile)
 
 
-// app.post('vetProfiles', route.vetProfiles)
 
-module.exports = app;
