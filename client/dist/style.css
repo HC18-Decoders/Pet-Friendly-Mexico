@@ -22,9 +22,9 @@ h1 {
   width: 100%;
 }
 
-.signup {
+.logOut {
   font-size: 28px;
-  position: sticky;
+  position: static;
   padding: 0;
   color: white;
   text-align: center;
@@ -32,7 +32,7 @@ h1 {
 
 .login {
   font-size: 28px;
-  position: sticky;
+  position: static;
   padding: 0;
   color: white;
   text-align: center;
@@ -83,7 +83,6 @@ h1 {
 /*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/
-
 
 /*id tag for vetprofile component*/
 

@@ -38,7 +38,7 @@ export default class Services extends React.Component {
 
     componentDidMount() {
       this.postVetProfiles();
-    }
+
 
 
 

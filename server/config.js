@@ -8,21 +8,26 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
+//GET routing
 
 
 
+app.get('/vetProfiles', route.getSingleVetProfile)
 
-// app.get('/signUp', route.getSignUp)
-//
-// app.get('/logIn', route.getLogIn)
+//app.get('/petProfiles', route.getPet)
 
-app.get('/vetProfiles', route.getVet)
+//app.post('/petProfiles', route.postSinglePetProfile)
 
-app.get('/petProfiles', route.getPet)
+app.post('/servicesProfiles', route.postSinglServiceProfile)
 
-
+app.get('/searchresults', route.getVet)
 
 
-// app.post('vetProfiles', route.vetProfiles)
+//POST requests
 
-module.exports = app;
+app.post('/userprofile', route.postSinglePetProfile)
+
+app.post('/servicesprofile', route.postSingleVetProfile)
+
+
+

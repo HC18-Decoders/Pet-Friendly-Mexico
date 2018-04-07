@@ -19,10 +19,12 @@ export default class Header extends React.Component {
       user: null,
       open: false
     }
+
     this.handleToggle=this.handleToggle.bind(this)
     this.handleClose=this.handleClose.bind(this)
-    this.login=this.login.bind(this)
-    this.logout=this.logout.bind(this)
+    this.login = this.login.bind(this)
+    this.logout = this.logout.bind(this)
+
   }
   async login() {
     const result = await auth().signInWithPopup(provider)
@@ -30,20 +32,17 @@ export default class Header extends React.Component {
   }
 
   async logout() {
-  await auth().signOut()
-   this.setState({user: null});
- }
-
- async componentWillMount() {
-   const user = await auth.onAuthStateChanged();
-   if (user) {
-     this.setState({user})
- }
-}
-
-  handleClick() {
-    alert('This button was clicked');
+    await auth().signOut()
+    this.setState({user: null});
   }
+
+  async componentWillMount() {
+    const user = firebase.auth();;
+    if (user) {
+      this.setState({user})
+    }
+  }
+
 
   handleToggle() {
     this.setState({open: !this.state.open});
