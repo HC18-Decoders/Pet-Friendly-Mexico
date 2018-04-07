@@ -3,8 +3,6 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-
-
 const getVetProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM vetProfiles', (err, data) => {

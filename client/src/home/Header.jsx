@@ -8,7 +8,6 @@ import firebase from 'firebase';
 import {provider, auth} from '../config/client.js';
 import runtimeGenerator from 'regenerator-runtime/runtime';
 
-
 export default class Header extends React.Component {
 
   constructor(props) {
@@ -16,8 +15,8 @@ export default class Header extends React.Component {
     this.state = {
       user: null
     }
-    this.login=this.login.bind(this)
-    this.logout=this.logout.bind(this)
+    this.login = this.login.bind(this)
+    this.logout = this.logout.bind(this)
   }
   async login() {
     const result = await auth().signInWithPopup(provider)
@@ -25,31 +24,29 @@ export default class Header extends React.Component {
   }
 
   async logout() {
-  await auth().signOut()
-   this.setState({user: null});
- }
-
- async componentWillMount() {
-   const user = await auth.onAuthStateChanged();
-   if (user) {
-     this.setState({user})
- }
-}
-
-  handleClick() {
-    alert('This button was clicked');
+    await auth().signOut()
+    this.setState({user: null});
   }
 
+  async componentWillMount() {
+    const user = firebase.auth();;
+    if (user) {
+      this.setState({user})
+    }
+  }
+
+
   render() {
-    return(
-      <Toolbar className= "toolBar" style={{backgroundColor:darkBlack}}>
-          <ToolbarGroup>
-            <ToolbarTitle text="Pet's Mexico" style={{color:white}}/>
-            <ToolbarSeparator />
-            <FlatButton className="login" onClick={this.handleClick} label="Login with Facebook" style={{right: -705, color: white}} />
-            <FlatButton className="logOut" onClick={this.handleClick} label="Logout" style={{left: 680, color: white}} />
-          </ToolbarGroup>
-        </Toolbar>
-  );
-}
+    const {user} = this.state
+    return (
+         <Toolbar className="toolBar" style={{backgroundColor: darkBlack}}>
+      <ToolbarGroup>
+        <ToolbarTitle text="Pet's Mexico" style={{color: white}}/>
+        <ToolbarSeparator/>
+            <p style={{color: white}}>{ user ? `Hola, ${user.displayName}` : 'Bienvenido'}</p>
+        <FlatButton className="login" onClick={this.login} label="Registro con Facebook" style={{right: -355, color: white}}/>
+        <FlatButton className="signup" onClick={this.logout} label="Salir" style={{left: 290, color: white}}/>
+      </ToolbarGroup>
+    </Toolbar>);
+  }
 }
