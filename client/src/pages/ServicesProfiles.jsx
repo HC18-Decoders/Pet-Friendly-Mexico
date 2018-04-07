@@ -14,7 +14,7 @@ export default class Services extends React.Component {
         firstName: '',
         lastName: '',
         phoneNumber: '',
-        address: '',
+        address: ''
       };
     };
 
@@ -27,7 +27,7 @@ export default class Services extends React.Component {
         address: address
       })
       .then(() => {
-        this.postServicesProfiles();
+        this.postVetProfiles();
       })
     }
 
@@ -37,8 +37,8 @@ export default class Services extends React.Component {
 
 
     componentDidMount() {
-      this.postServicesProfiles();
-    }
+      this.postVetProfiles();
+
 
 
 
@@ -70,7 +70,7 @@ export default class Services extends React.Component {
         floatingLabelText="Domicilio" />
     </div>
     <div>
-      <FlatButton onClick={(e) => this.handleClick(e)} label="Ingresar" style={{color: darkBlack}} />
+      <FlatButton onClick={(e) => this.handleClick(e)} label="Submit" style={{color: darkBlack}} />
     </div>
     </div>
   )
