@@ -4,31 +4,6 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-// const getSignUp = function() {
-//   return new Promise((resolve, reject) => {
-//     connection.query('SELECT * FROM signUp', (err, data) => {
-//       if(err) {
-//         return reject(err);
-//       }
-//       return resolve(data);
-//     })
-//   })
-// };
-//
-//
-// const getLogIn = function() {
-//   return new Promise((resolve, reject) => {
-//     connection.query('SELECT * FROM logIn', (err, data) => {
-//       if(err) {
-//         return reject(err);
-//       }
-//       return resolve(data);
-//     })
-//   })
-// };
-//
-
-
 const getVetProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM vetProfiles', (err, data) => {

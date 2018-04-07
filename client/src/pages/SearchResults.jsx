@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-
 import Header from '../home/Header.jsx';
 import { Switch, Route } from 'react-router-dom';
 import ResultsLayout from "./ResultsLayout.jsx"

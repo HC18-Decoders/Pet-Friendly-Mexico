@@ -29,33 +29,23 @@ export default class Header extends React.Component {
   }
 
   async componentWillMount() {
-    const user = await auth.onAuthStateChanged();
+    const user = firebase.auth();;
     if (user) {
       this.setState({user})
     }
   }
 
-  handleClick() {
-    alert('This button was clicked');
-  }
 
   render() {
-    return (<Toolbar className="toolBar" style={{
-        backgroundColor: darkBlack
-      }}>
+    const {user} = this.state
+    return (
+         <Toolbar className="toolBar" style={{backgroundColor: darkBlack}}>
       <ToolbarGroup>
-        <ToolbarTitle text="Pet's Mexico" style={{
-            color: white
-          }}/>
+        <ToolbarTitle text="Pet's Mexico" style={{color: white}}/>
         <ToolbarSeparator/>
-        <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{
-            right: -805,
-            color: white
-          }}/>
-        <FlatButton className="signup" onClick={this.logout} label="Logout" style={{
-            left: 780,
-            color: white
-          }}/>
+            <p style={{color: white}}>{user ? `Hi, ${user.displayName}!` : 'Hi undefined!'}</p>
+        <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -435, color: white}}/>
+        <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 450, color: white}}/>
       </ToolbarGroup>
     </Toolbar>);
   }
