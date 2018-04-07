@@ -75,6 +75,11 @@ h1 {
   attachment: fixed;
 }
 
+.drawer {
+  background-color: #00000;
+  color: black;
+}
+
 /*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/

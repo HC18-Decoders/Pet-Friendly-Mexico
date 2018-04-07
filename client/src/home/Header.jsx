@@ -60,8 +60,8 @@ export default class Header extends React.Component {
             <div>
               <FlatButton label='Menu' onClick={this.handleToggle} style={{color: white}}/>
               <Drawer docked={false} width={200} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
-              <MenuItem onClick={this.handleClose}>Menu Item</MenuItem>
-              <MenuItem onClick={this.handleClose}>Menu Item 2</MenuItem>
+              <MenuItem onClick={this.handleClose}>Create Service Profile</MenuItem>
+              <MenuItem onClick={this.handleClose}>Create User Profile</MenuItem>
             </Drawer>
             </div>
             <ToolbarTitle text="Pet's Mexico" style={{color:white}}/>
