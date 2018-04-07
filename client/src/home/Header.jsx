@@ -70,6 +70,6 @@ export default class Header extends React.Component {
             <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 780, color: white}} />
           </ToolbarGroup>
         </Toolbar>
-  );
-}
+    );
+  }
 }
