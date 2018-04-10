@@ -21,7 +21,8 @@ app.get('userprofile', route.getPet)
 
 app.post('/userprofile', route.postSinglePetProfile)
 
-app.post('/servicesprofile', route.postSingleServiceProfile)
+
+app.post('/servicesprofile', route.postSinglServiceProfile)
 
 
 module.exports = app;

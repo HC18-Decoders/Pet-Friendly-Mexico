@@ -10,7 +10,7 @@ export default class SearchResults extends React.Component {
     super(props);
     this.state = {
       vets: []
-    };
+    }
     this.getVet = this.getVet.bind(this);
   }
 

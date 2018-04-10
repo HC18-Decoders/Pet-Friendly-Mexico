@@ -1,86 +1,61 @@
-import React, { Component } from 'react'
-import Avatar from 'material-ui/Avatar';
+import React from 'react'
 import axios from 'axios';
-import FontIcon from 'material-ui/FontIcon';
-import {darkBlack, white} from 'material-ui/styles/colors';
-import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import {Link} from 'react-router-dom';
 
-export default class Profile extends React.Component {
+import Header from '../home/Header.jsx';
+import AddPetProfile from '../components/user/AddPetProfile.jsx';
+
+export default class UserProfile extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        petName: '',
-        age: '',
-        breed: '',
-        vaccines: '',
-        dewormed: '',
-        smallDescription: ''
-      };
-      this.add = this.add.bind(this);
-    };
-
-
-    postPetProfiles(petName, age, breed, vaccines, dewormed, smallDescription) {
-      axios.post('/vetProfiles', {
-      petName : petName,
-      age : age,
-      breed : breed,
-      vaccines : vaccines,
-      dewormed : dewormed,
-      smallDescription : smallDescription
-      })
-      .then(() => {
-        this.getPetProfile
-      })
-    }
-    
-    add() {
-      this.props.addInput(this.state.petName,
-                          this.state.age,
-                          this.state.breed,
-                          this.state.vaccines,
-                          this.state.dewormed,
-                          this.state.smallDescription)
+        pet: []
+      }
+      this.getPet = this.getPet.bind(this);
+      this.postPetProfile = this.postPetProfile.bind(this);
     }
 
-  render() {
-  return (
-    <div>
-      <div>
-      <Avatar
-        icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
-        size={250}
-      />
-    </div>
-    <div>
-      <TextField title="petName" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Nombre de Mascota" />
-    </div>
-    <div>
-      <TextField title="age" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Edad"  />
-    </div>
-    <div>
-      <TextField title="breed" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Raza" colors="darkBlack" />
-    </div>
-    <div>
-      <TextField title="vaccines" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Vacunas" />
-    </div>
-    <div>
-      <TextField title="dewormed" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Desparasitado(a)?" />
-    </div>
-    <div>
-      <TextField title="smallDescription" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Descripción" />
-    </div>
-    <div>
-      <FlatButton className="submitProf" label="Submit" onClick={(e) => this.handleClick(e)} style={{left: 680, color: white}} />
-    </div>
-    </div>
-  )
-}
-}
+    componentDidMount() {
+      this.getPet();
+    }
+
+    getPet() {
+      axios.get('/userprofile')
+        .then(data => {
+          this.setState({pet: data[0]})
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+
+
+
+    postPetProfile(petName, age, breed, vaccines, dewormed, smallDescription) {
+      axios.post('/userprofile', {
+        petName : petName,
+        age : age,
+        breed : breed,
+        vaccines : vaccines,
+        dewormed : dewormed,
+        smallDescription : smallDescription
+        })
+        .then(() => {
+          this.getPet()
+        })
+      }
+
+      render() {
+        return (
+          <div className="pet-sublayout">
+            <div>
+              <Header />
+            </div>
+            <h3> Creat tu Perfil de tu Mascota!</h3>
+            <div>
+              <AddPetProfile postPetProfile={this.postPetProfile}/>
+            </div>
+          </div>
+        )
+      }
+    }
