@@ -17,10 +17,10 @@ const getVetProfiles = function() {
 
 
 
-const postServicesProfiles = function(firstName, lastName, phoneNumber, address) {
+const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {
  return new Promise((resolove, reject) => {
-   connection.query('INSERT INTO servicesProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
-     [firstName, lastName, phoneNumber, address], (err, data) => {
+   connection.query('INSERT INTO servicesProfiles(firstName, lastName, phoneNumber, address, businessName, businessType) VALUES (?, ?, ?, ?, ?, ?)',
+     [firstName, lastName, phoneNumber, address, businessName, businessType], (err, data) => {
        if(err) {
          return reject(err);
        }
@@ -31,16 +31,6 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, address)
 
 
 
-const postPetProfiles = function(firstName, lastName, phoneNumber, address) {
-  return new Promise((resolove, reject) => {
-  connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES (?,?,?,?,?,?)', [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
-          if (err) {
-            return reject(err);
-          }
-          return resolve(data);
-        })
-      })
-    };
 
 
 

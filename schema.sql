@@ -40,11 +40,13 @@ CREATE TABLE servicesProfiles(
   firstName varchar(255) NOT NULL,
   lastName varchar (255) NOT NULL,
   phoneNumber CHAR(20) NOT NULL,
-  address TEXT
+  address TEXT,
+  businessName varchar(255) NOT NULL,
+  businessType varchar(255) NOT NULL
 );
 
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Norma', 'Martinez', '5540204972', '123 Test St., Testing, TS, 12345');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Liz', 'Tapia', '5523169836', '456 Tested Ave., Tester, TS,67890');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd., Approved, TS, 54721');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way, Testing, TS, 87534');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd., Tests, TS, 38943');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Norma', 'Martinez', '5540204972', '123 Test St., Testing, TS, 12345', 'Fly Pet', 'Pet Groomer');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Liz', 'Tapia', '5523169836', '456 Tested Ave., Tester, TS,67890', 'Pet Nanny 911', 'Pet Sitter');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd., Approved, TS, 54721', 'Healthy Pet', 'Veterinary');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way, Testing, TS, 87534', 'Distresser', 'Dog Walker');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd., Tests, TS, 38943', 'Pet Doctor', 'Veterinary');

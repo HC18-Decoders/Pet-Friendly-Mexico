@@ -24,12 +24,14 @@ exports.getPet = (req, res) => {
 
 //POST requests
 
-exports.postSinglServiceProfile = (req, res) => {
+exports.postSingleServiceProfile = (req, res) => {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var phoneNumber = req.body.phoneNumber;
   var address = req.body.address;
-  db.postServicesProfiles(firstName, lastName, phoneNumber, address)
+  var businessName = req.body.businessName;
+  var businessType = req.body.businessType;
+  db.postServicesProfiles(firstName, lastName, phoneNumber, address, businessName, businessType)
   .then(data => {
     res.status(200).send(data)
   })

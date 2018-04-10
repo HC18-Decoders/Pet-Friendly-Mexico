@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/../client/dist'));
 
-//GET routing
 
 
 app.get('/searchresults', route.getVet)
@@ -21,6 +20,7 @@ app.get('userprofile', route.getPet)
 //POST requests
 
 app.post('/userprofile', route.postSinglePetProfile)
+
 
 app.post('/servicesprofile', route.postSinglServiceProfile)
 
