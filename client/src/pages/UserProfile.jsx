@@ -21,7 +21,7 @@ export default class Profile extends React.Component {
     };
 
 
-    postPetProfiles(petName, age, breed, vaccines, dewormed, smallDescription) {
+    postPetProfile(petName, age, breed, vaccines, dewormed, smallDescription) {
       axios.post('/vetProfiles', {
       petName : petName,
       age : age,
@@ -34,7 +34,7 @@ export default class Profile extends React.Component {
         this.getPetProfile
       })
     }
-    
+
     add() {
       this.props.addInput(this.state.petName,
                           this.state.age,
