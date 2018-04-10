@@ -25,8 +25,8 @@ class Search extends React.Component {
         Búsqueda   <br></br>
         <TextField className="search-box"
                    floatingLabelText="Escribe el nombre del lugar..."
-                   underlineStyle="white"
-                   fullLength={true}
+                   underlineStyle={{white}}
+                   fulllength="true"
                    style={{color:darkBlack}} />
                  <Link to="/searchresults"><FlatButton onClick={(e) => this.handleClick(e)}
                     label="Go!"

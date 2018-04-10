@@ -71,24 +71,24 @@ class AddVetProfile extends React.Component{
       <div>
         <TextField title="firstName"
                    onChange={this.updateFirstName}
-                   underlineStyle="white"
-                   fullLength={true}
+                   underlineStyle={{white}}
+                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Nombre" />
       </div>
       <div>
         <TextField title="lastName"
                    onChange={this.updateLastName}
-                   underlineStyle="white"
-                   fullLength={true}
+                   underlineStyle={{white}}
+                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Apellido"  />
       </div>
       <div>
         <TextField title="phoneNumber"
                    onChange={this.updatePhoneNumber}
-                   underlineStyle="white"
-                   fullLength={true}
+                   underlineStyle={{white}}
+                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Telefono"
                    colors="darkBlack" />
@@ -96,8 +96,8 @@ class AddVetProfile extends React.Component{
       <div>
         <TextField title="address"
                    onChange={this.updateAdress}
-                   underlineStyle="white"
-                   fullLength={true}
+                   underlineStyle={{white}}
+                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Domicilio" />
       </div>
