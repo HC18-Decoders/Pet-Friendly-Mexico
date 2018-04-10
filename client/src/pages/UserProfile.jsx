@@ -51,7 +51,7 @@ export default class UserProfile extends React.Component {
             <div>
               <Header />
             </div>
-            <h3> Creat tu Perfil de tu Mascota!</h3>
+            <h3> Creat el Perfil de tu Mascota!</h3>
             <div>
               <AddPetProfile postPetProfile={this.postPetProfile}/>
             </div>
