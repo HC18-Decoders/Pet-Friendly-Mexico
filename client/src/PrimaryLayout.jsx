@@ -14,9 +14,9 @@ const PrimaryLayout = ({ match }) => (
     <main>
       <Switch>
         <Route exact path={`${match.path}`} component={Home} />
-        <Route path={`${match.url}searchresults`} component={SearchResults} />
-        <Route path={`${match.path}userprofile`} component={UserProfile} />
-        <Route path={`${match.path}servicesprofile`} component={ServicesProfile} />
+        <Route path={'/searchresults'} component={SearchResults} />
+        <Route path={'/userprofile'} component={UserProfile} />
+        <Route path={'/servicesprofile'} component={ServicesProfile} />
       </Switch>
     </main>
   </div>
