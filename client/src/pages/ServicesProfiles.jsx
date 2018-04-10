@@ -14,7 +14,9 @@ export default class Services extends React.Component {
         firstName: '',
         lastName: '',
         phoneNumber: '',
-        address: ''
+        address: '',
+        businessName: '',
+        businessType: ''
       };
     };
 
@@ -68,6 +70,14 @@ export default class Services extends React.Component {
     <div>
       <TextField title="address" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
         floatingLabelText="Domicilio" />
+    </div>
+    <div>
+      <TextField title="businessName" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Nombre del Negocio" />
+    </div>
+    <div>
+      <TextField title="businessType" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Tipo de Negocio" />
     </div>
     <div>
       <FlatButton onClick={(e) => this.handleClick(e)} label="Submit" style={{color: darkBlack}} />
