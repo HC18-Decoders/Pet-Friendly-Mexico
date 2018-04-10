@@ -14,10 +14,12 @@ class AddVetProfile extends React.Component{
      firstName: '',
      lastName: '',
      phoneNumber: '',
-     address
+     address: ''
   }
-  this.updatePetName = this.updatePetName.bind(this);
-  this.addNewProfile = this.addNewProfile.bind(this);
+  this.updateFirstName = this.updateFirstName.bind(this);
+  this.updateLastName = this.updateLastName.bind(this);
+  this.updatePhoneNumber = this.updatePhoneNumber.bind(this);
+  this.updateAdress = this.updateAdress.bind(this);
  }
 
  updateFirstName(event){
@@ -52,7 +54,7 @@ class AddVetProfile extends React.Component{
       firstName: '',
       lastName: '',
       phoneNumber: '',
-      address
+      address: ''
     })
   }
 
@@ -100,11 +102,13 @@ class AddVetProfile extends React.Component{
                    floatingLabelText="Domicilio" />
       </div>
       <div>
-        <FlatButton onClick={(e) => this.handleClick(e)} label="Ingresar" style={{color: darkBlack}} />
+        <FlatButton onClick={this.addNewProfile}
+                    label="Ingresar"
+                    style={{color: darkBlack}} />
       </div>
       </div>
     );
   }
 }
 
-export default AddPetProfile;
+export default AddVetProfile;

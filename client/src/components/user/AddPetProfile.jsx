@@ -19,7 +19,10 @@ class AddPetProfile extends React.Component{
      smallDescription: ''
   }
   this.updatePetName = this.updatePetName.bind(this);
-  this.addNewProfile = this.addNewProfile.bind(this);
+  this.updateAge = this.updateAge.bind(this);
+  this.updateBreed = this.updateBreed.bind(this);
+  this.updateVaccines = this.updateVaccines.bind(this);
+  this.updateDewormed = this.updateDewormed.bind(this);
  }
 
  updatePetName(event){

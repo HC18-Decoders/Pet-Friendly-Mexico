@@ -13,6 +13,10 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/searchresults', route.getVet)
 
+app.get('userprofile', route.getPet)
+
+// app.get('/profile?:id', route.getProfile)
+
 
 //POST requests
 
