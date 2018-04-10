@@ -15,16 +15,6 @@ const getVetProfiles = function() {
 };
 
 
-const getPetProfiles = function() {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM petProfiles', (err, data) => {
-      if(err){
-        return reject(err);
-      }
-      return resolve(data);
-    })
-  })
-};
 
 
 const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {
@@ -41,21 +31,12 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, address,
 
 
 
-const postPetProfiles = function(petName, age, breed, vaccines, dewormed, smallDescription) {
- return new Promise((resolve, reject) => {
-   connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES(?, ?, ?, ?, ?, ?)',
-     [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
-       if(err) {
-         return reject(err);
-       }
-       return resolve(data);
-     })
-  })
-};
+
+
+
 
 module.exports = {
   getVetProfiles,
-  getPetProfiles,
   postServicesProfiles,
   postPetProfiles
 };
