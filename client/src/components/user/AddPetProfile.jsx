@@ -88,6 +88,7 @@ class AddPetProfile extends React.Component{
         <div>
           <TextField title="petName"
                      onChange={this.updatePetName}
+                     value={this.state.petName}
                      underlineStyle="white"
                      fullLength={true}
                      style={{color:darkBlack}}

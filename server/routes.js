@@ -46,7 +46,7 @@ exports.postSinglePetProfile = (req, res) => {
   let vaccines = req.body.vaccines;
   let dewormed = req.body.dewormed;
   let smallDescription = req.body.smallDescription;
-  db.postPetProfiles(petName, age, breed, vaccines, dewormed, smallDescription)
+  db.postPetProfile(petName, age, breed, vaccines, dewormed, smallDescription)
   .then(data => {
     res.status(200).send(data)
   })

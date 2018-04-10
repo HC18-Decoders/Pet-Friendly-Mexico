@@ -56,6 +56,7 @@ export default class Header extends React.Component {
 }
 
   render() {
+    const {user} = this.state
     return(
       <Toolbar className= "toolBar" style={{backgroundColor:darkBlack}}>
           <ToolbarGroup>
@@ -68,8 +69,9 @@ export default class Header extends React.Component {
             </div>
             <Link to='/'><ToolbarTitle text="Pet's Mexico" style={{color:white}}/></Link>
             <ToolbarSeparator />
-            <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -805, color: white}} />
-            <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 780, color: white}} />
+            <p className= "hi">{user ? `Hi, ${user.displayName}!` : 'Hi!'}</p>
+            <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -375, color: white }} />
+            <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 350, color: white}} />
           </ToolbarGroup>
         </Toolbar>
     );
