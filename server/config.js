@@ -22,7 +22,7 @@ app.get('userprofile', route.getPet)
 app.post('/userprofile', route.postSinglePetProfile)
 
 
-app.post('/servicesprofile', route.postSinglServiceProfile)
+app.post('/servicesprofile', route.postSingleServiceProfile)
 
 
 module.exports = app;
