@@ -12,16 +12,16 @@ export default class ServicesProfile extends React.Component {
       this.state = {
         vet: []
       }
-      this.getVet = this.getVet.bind(this);
+      this.getVetProfiles = this.getVetProfiles.bind(this);
       this.postVetProfiles = this.postVetProfiles.bind(this);
     }
 
     componentDidMount() {
-      this.getVet();
+      this.getVetProfiles();
     }
 
-    getVet(){
-      axios.get('/servicesprofile')
+    getVetProfiles(){
+      axios.get('/serviceprofile')
         .then(data => {
           this.setState({vet: data[0]});
         })
@@ -31,14 +31,14 @@ export default class ServicesProfile extends React.Component {
     }
 
     postVetProfiles(firstName, lastName, phoneNumber, address) {
-      axios.post('/servicesprofile', {
+      axios.post('/serviceprofile', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
         address: address
       })
       .then(() => {
-        this.getVet();
+        this.getVetProfiles();
       })
     }
 

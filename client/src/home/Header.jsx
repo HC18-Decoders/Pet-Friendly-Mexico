@@ -58,20 +58,30 @@ export default class Header extends React.Component {
   render() {
     const {user} = this.state
     return(
-      <Toolbar className= "toolBar" style={{backgroundColor:darkBlack}}>
+      <Toolbar className= "toolBar"
+               style={{backgroundColor:darkBlack}}>
           <ToolbarGroup>
             <div>
-              <FlatButton label='Menu' onClick={this.handleToggle} style={{color: white}}/>
-              <Drawer docked={false} width={200} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
+              <FlatButton label='Menu'
+                          onClick={this.handleToggle}
+                          style={{color: white}}/>
+              <Drawer docked={false}
+                      width={200}
+                      open={this.state.open}
+                      onRequestChange={(open) => this.setState({open})}>
               <Link to='/servicesprofile'><MenuItem onClick={this.handleClose}>Create Service Profile</MenuItem></Link>
               <Link to='/userprofile'><MenuItem onClick={this.handleClose}>Create User Profile</MenuItem></Link>
             </Drawer>
             </div>
-            <Link to='/'><ToolbarTitle text="Pet's Mexico" style={{color:white}}/></Link>
+            <Link to='/'><ToolbarTitle
+                  text="Pet's Mexico"
+                  style={{color:white}}/></Link>
             <ToolbarSeparator />
+
             <p className= "hi">{user ? `Hi, ${user.displayName}!` : 'Hi!'}</p>
             <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -375, color: white }} />
             <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 350, color: white}} />
+
           </ToolbarGroup>
         </Toolbar>
     );

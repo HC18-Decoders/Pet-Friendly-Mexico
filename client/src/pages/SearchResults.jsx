@@ -11,15 +11,15 @@ export default class SearchResults extends React.Component {
     this.state = {
       vets: []
     }
-    this.getVet = this.getVet.bind(this);
+    this.getVetProfiles = this.getVetProfiles.bind(this);
   }
 
   componentDidMount() {
-    this.getVet();
+    this.getVetProfiles();
   }
 
-  getVet() {
-    axios.get('/searchresults')
+  getVetProfiles() {
+    axios.get('/results')
       .then(data => {
         this.setState({vet: data[0]});
       })
