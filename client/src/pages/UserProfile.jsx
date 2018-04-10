@@ -2,19 +2,31 @@ import React from 'react'
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 
+import Header from '../home/Header.jsx';
 import AddPetProfile from '../components/user/AddPetProfile.jsx';
 
 export default class UserProfile extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        data: []
+        pet: []
       }
-      this.insertPetProfile = this.insertPetProfile.bind(this);
+      this.getPet = this.getPet.bind(this);
+      this.postPetProfile = this.postPetProfile.bind(this);
     }
 
     componentDidMount() {
-      
+      this.getPet();
+    }
+
+    getPet() {
+      axios.get('/userprofile')
+        .then(data => {
+          this.setState({pet: data[0]})
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
 
 
@@ -29,7 +41,7 @@ export default class UserProfile extends React.Component {
         smallDescription : smallDescription
         })
         .then(() => {
-          this.getVet()
+          this.getPet()
         })
       }
 
@@ -39,8 +51,9 @@ export default class UserProfile extends React.Component {
             <div>
               <Header />
             </div>
+            <h3> Creat tu Perfil de tu Mascota!</h3>
             <div>
-              <AddPetProfile insertPetProfile={this.insertPetProfile}/>
+              <AddPetProfile postPetProfile={this.postPetProfile}/>
             </div>
           </div>
         )

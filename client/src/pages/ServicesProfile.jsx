@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+import AddVetProfile from '../components/services/AddVetProfile.jsx';
+import Header from '../home/Header.jsx';
+
+
 
 export default class ServicesProfile extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        address: '',
+        vet: []
       }
       this.getVet = this.getVet.bind(this);
       this.postVetProfiles = this.postVetProfiles.bind(this);
@@ -20,19 +21,14 @@ export default class ServicesProfile extends React.Component {
     }
 
     getVet(){
-      axios.get('/servicesprofile', {
-        petName: petName,
-        age: age,
-        breed: breed,
-        vaccines: vaccines,
-        dewormed: dewormed,
-        smallDescription: smallDescription
-      })
+      axios.get('/servicesprofile')
+        .then(data => {
+          this.setState({vet: data[0]});
+        })
       .catch(error => {
         console.log(error);
       });
     }
-
 
     postVetProfiles(firstName, lastName, phoneNumber, address) {
       axios.post('/servicesprofile', {
