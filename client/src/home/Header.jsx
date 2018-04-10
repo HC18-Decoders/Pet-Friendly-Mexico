@@ -22,8 +22,8 @@ export default class Header extends React.Component {
       open: false
     }
 
-    this.handleToggle=this.handleToggle.bind(this)
-    this.handleClose=this.handleClose.bind(this)
+    this.handleToggle = this.handleToggle.bind(this)
+    this.handleClose = this.handleClose.bind(this)
     this.login = this.login.bind(this)
     this.logout = this.logout.bind(this)
 
@@ -45,10 +45,11 @@ export default class Header extends React.Component {
     }
   }
 
-
   handleToggle() {
-    this.setState({open: !this.state.open});
-}
+    this.setState({
+      open: !this.state.open
+    });
+  }
 
  handleClose(){
    this.setState({open: false});

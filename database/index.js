@@ -15,6 +15,16 @@ const getVetProfiles = function() {
 };
 
 
+const getPetProfiles = function() {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM petProfiles', (err, data) => {
+      if(err){
+        return reject(err);
+      }
+      return resolve(data);
+    })
+  })
+};
 
 
 const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {

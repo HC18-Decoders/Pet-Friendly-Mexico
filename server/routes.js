@@ -21,7 +21,6 @@ exports.getPet = (req, res) => {
     })
     .catch(err => { console.log(err) })
 }
-
 //POST requests
 
 exports.postSingleServiceProfile = (req, res) => {
@@ -37,6 +36,7 @@ exports.postSingleServiceProfile = (req, res) => {
   })
   .catch(err => { console.log(err) })
 }
+
 
 
 exports.postSinglePetProfile = (req, res) => {
