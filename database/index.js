@@ -15,7 +15,7 @@ const getVetProfiles = function() {
 };
 
 
-/*const getPetProfiles = function() {
+const getPetProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM petProfiles', (err, data) => {
       if(err){
@@ -24,13 +24,13 @@ const getVetProfiles = function() {
       return resolve(data);
     })
   })
-};*/
+};
 
 
-const postServicesProfiles = function(firstName, lastName, phoneNumber, address) {
+const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {
  return new Promise((resolove, reject) => {
-   connection.query('INSERT INTO servicesProfiles(firstName, lastName, phoneNumber, address) VALUES (?, ?, ?, ?)',
-     [firstName, lastName, phoneNumber, address], (err, data) => {
+   connection.query('INSERT INTO servicesProfiles(firstName, lastName, phoneNumber, address, businessName, businessType) VALUES (?, ?, ?, ?, ?, ?)',
+     [firstName, lastName, phoneNumber, address, businessName, businessType], (err, data) => {
        if(err) {
          return reject(err);
        }
@@ -39,31 +39,9 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, address)
   })
 };
 
-    const postVetProfiles = function(firstName, lastName, phoneNumber, address) {
-      return new Promise((resolove, reject) => {
-      connection.query('INSERT INTO vetProfiles(firstName, lastName, phoneNumber, address) VALUES(?,?,?,?)', [firstName, lastName, phoneNumber, address], (err, data) => {
-          if (err) {
-            return reject(err);
-          }
-          return resolve(data);
-        })
-      })
-    };
 
 
-const postPetProfiles = function(firstName, lastName, phoneNumber, address) {
-  return new Promise((resolove, reject) => {
-  connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES (?,?,?,?,?,?)', [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
-          if (err) {
-            return reject(err);
-          }
-          return resolve(data);
-        })
-      })
-    };
-
-
-/*const postPetProfiles = function(petName, age, breed, vaccines, dewormed, smallDescription) {
+const postPetProfiles = function(petName, age, breed, vaccines, dewormed, smallDescription) {
  return new Promise((resolve, reject) => {
    connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES(?, ?, ?, ?, ?, ?)',
      [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
@@ -73,11 +51,11 @@ const postPetProfiles = function(firstName, lastName, phoneNumber, address) {
        return resolve(data);
      })
   })
-};*/
+};
 
 module.exports = {
   getVetProfiles,
-  //getPetProfiles,
+  getPetProfiles,
   postServicesProfiles,
-  //postPetProfiles
+  postPetProfiles
 };
