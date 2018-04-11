@@ -30,7 +30,7 @@ const getPetProfiles = function() {
 const postServicesProfiles = function(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) {
  return new Promise((resolove, reject) => {
    connection.query('INSERT INTO servicesProfiles(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
-     [firstName, lastName, phoneNumber, address, businessName, businessType], (err, data) => {
+     [firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType], (err, data) => {
        if(err) {
          return reject(err);
        }
