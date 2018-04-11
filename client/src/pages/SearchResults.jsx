@@ -11,17 +11,17 @@ export default class SearchResults extends React.Component {
     this.state = {
       vets: []
     }
-    this.getVet = this.getVet.bind(this);
+    this.getVetProfiles = this.getVetProfiles.bind(this);
   }
 
   componentDidMount() {
-    this.getVet();
+    this.getVetProfiles();
   }
 
-  getVet() {
-    axios.get('/searchresults')
+  getVetProfiles() {
+    axios.get('/results')
       .then(data => {
-        this.setState({vet: data[0]});
+        this.setState({vets: data.data});
       })
       .catch(error => {
         console.log(error);
@@ -31,18 +31,18 @@ export default class SearchResults extends React.Component {
   render(){
     return(
       <div className="vet-sublayout">
-        <div>
-          <Header />
-        </div>
         <div className="vet-content">
-        <Switch>
-          <Route exact path={this.props.match.path}
-            render={(props) => <ResultsLayout {...props} data={this.state} /> } />
-            <Route path={`${this.props.match.path}/:id`}
-              render={(props) => <Profile {...props} data={this.state} /> } />
-        </Switch>
+          <div>
+            <Header />
+          </div>
+            <Switch>
+              <Route exact path={this.props.match.path}
+                render={(props) => <ResultsLayout {...props} vets={this.state.vets} /> } />
+              <Route path={`${this.props.match.path}/:id`}
+                render={(props) => <Profile {...props} vets={this.state.vets} /> } />
+            </Switch>
+          </div>
         </div>
-      </div>
     )
   }
 };

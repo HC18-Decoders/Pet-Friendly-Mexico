@@ -23,6 +23,7 @@ class AddPetProfile extends React.Component{
   this.updateBreed = this.updateBreed.bind(this);
   this.updateVaccines = this.updateVaccines.bind(this);
   this.updateDewormed = this.updateDewormed.bind(this);
+  this.updateSmallDescription = this.updateSmallDescription.bind(this);
  }
 
  updatePetName(event){
@@ -88,24 +89,21 @@ class AddPetProfile extends React.Component{
         <div>
           <TextField title="petName"
                      onChange={this.updatePetName}
-                     underlineStyle="white"
-                     fullLength={true}
-                     style={{color:darkBlack}}
+                     underlineStyle={{white}}
+                     style={{color:darkBlack, left:180}}
                      floatingLabelText="Nombre de Mascota" />
         </div>
         <div>
           <TextField title="age"
                      onChange={this.updateAge}
-                     underlineStyle="white"
-                     fullLength={true}
+                     underlineStyle={{white}}
                      style={{color:darkBlack}}
                      floatingLabelText="Edad"  />
         </div>
         <div>
           <TextField title="breed"
                      onChange={this.updateBreed}
-                     underlineStyle="white"
-                     fullLength={true}
+                     underlineStyle={{white}}
                      style={{color:darkBlack}}
                      floatingLabelText="Raza"
                      colors="darkBlack" />
@@ -113,24 +111,21 @@ class AddPetProfile extends React.Component{
         <div>
           <TextField title="vaccines"
                      onChange={this.updateVaccines}
-                     underlineStyle="white"
-                     fullLength={true}
+                     underlineStyle={{white}}
                      style={{color:darkBlack}}
                      floatingLabelText="Vacunas" />
         </div>
         <div>
           <TextField title="dewormed"
                      onChange={this.updateDewormed}
-                     underlineStyle="white"
-                     fullLength={true}
+                     underlineStyle={{white}}
                      style={{color:darkBlack}}
                      floatingLabelText="Desparasitado(a)?" />
         </div>
         <div>
           <TextField title="smallDescription"
                      onChange={this.updateSmallDescription}
-                     underlineStyle="white"
-                     fullLength={true}
+                     underlineStyle={{white}}
                      style={{color:darkBlack}}
                      floatingLabelText="Descripción" />
         </div>

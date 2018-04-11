@@ -22,8 +22,8 @@ export default class Header extends React.Component {
       open: false
     }
 
-    this.handleToggle=this.handleToggle.bind(this)
-    this.handleClose=this.handleClose.bind(this)
+    this.handleToggle = this.handleToggle.bind(this)
+    this.handleClose = this.handleClose.bind(this)
     this.login = this.login.bind(this)
     this.logout = this.logout.bind(this)
 
@@ -45,30 +45,43 @@ export default class Header extends React.Component {
     }
   }
 
-
   handleToggle() {
-    this.setState({open: !this.state.open});
-}
+    this.setState({
+      open: !this.state.open
+    });
+  }
 
  handleClose(){
    this.setState({open: false});
 }
 
   render() {
+    const {user} = this.state
     return(
-      <Toolbar className= "toolBar" style={{backgroundColor:darkBlack}}>
+      <Toolbar className= "toolBar"
+               style={{backgroundColor:darkBlack}}>
           <ToolbarGroup>
             <div>
-              <FlatButton label='Menu' onClick={this.handleToggle} style={{color: white}}/>
-              <Drawer docked={false} width={200} open={this.state.open} onRequestChange={(open) => this.setState({open})}>
+              <FlatButton label='Menu'
+                          onClick={this.handleToggle}
+                          style={{color: white}}/>
+              <Drawer docked={false}
+                      width={200}
+                      open={this.state.open}
+                      onRequestChange={(open) => this.setState({open})}>
               <Link to='/servicesprofile'><MenuItem onClick={this.handleClose}>Create Service Profile</MenuItem></Link>
               <Link to='/userprofile'><MenuItem onClick={this.handleClose}>Create User Profile</MenuItem></Link>
             </Drawer>
             </div>
-            <Link to='/'><ToolbarTitle text="Pet's Mexico" style={{color:white}}/></Link>
+            <Link to='/'><ToolbarTitle
+                  text="Pet's Mexico"
+                  style={{color:white}}/></Link>
             <ToolbarSeparator />
-            <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -805, color: white}} />
-            <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 780, color: white}} />
+
+            <p className= "hi">{user ? `Hi, ${user.displayName}!` : 'Hi!'}</p>
+            <FlatButton className="login" onClick={this.login} label="Login with Facebook" style={{right: -375, color: white }} />
+            <FlatButton className="signup" onClick={this.logout} label="Logout" style={{left: 350, color: white}} />
+
           </ToolbarGroup>
         </Toolbar>
     );
