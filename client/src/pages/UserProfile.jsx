@@ -15,6 +15,15 @@ export default class UserProfile extends React.Component {
       this.postPetProfile = this.postPetProfile.bind(this);
     }
 
+
+    add() {
+      this.props.addInput(this.state.petName,
+                          this.state.age,
+                          this.state.breed,
+                          this.state.vaccines,
+                          this.state.dewormed,
+                          this.state.smallDescription)
+
     componentDidMount() {
       this.getPetProfiles();
     }

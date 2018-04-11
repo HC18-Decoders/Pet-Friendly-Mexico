@@ -30,12 +30,15 @@ export default class ServicesProfile extends React.Component {
       });
     }
 
-    postVetProfiles(firstName, lastName, phoneNumber, address) {
-      axios.post('/serviceprofile', {
+    postVetProfiles(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) {
+      axios.post('/servicesprofile', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
-        address: address
+        streetAddress: streetAddress,
+        city: city,
+        state: state,
+        zipCode: zipCode
       })
       .then(() => {
         this.getVetProfiles();

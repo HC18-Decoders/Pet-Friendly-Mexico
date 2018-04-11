@@ -10,14 +10,17 @@ CREATE TABLE vetProfiles(
   firstName varchar(255) NOT NULL,
   lastName varchar(255) NOT NULL,
   phoneNumber char(20) NOT NULL,
-  address TEXT
+  streetAddress TEXT,
+  city varchar(255),
+  state varchar(255),
+  zipCode char(50)
 );
 
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Marcella', 'Torres', '5540208533', '123 Test St., Testing, TS, 12345');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Alenjandro', 'Rodriguez', '5523164288', '456 Tested Ave., Tester, TS,67890');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jacqueline', 'Romero', '5534668497', '789 W. Test Rd., Approved, TS, 54721');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jesse', 'Nava', '5521224558', '109 E. Testing Way, Testing, TS, 87534');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, address) VALUES ('Jack', 'Cervantes', '5519814312', '22 Tester Rd., Tests, TS, 38943');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Marcella', 'Torres', '5540208533', '123 Test St.', 'Testing', 'TS', '12345');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Alenjandro', 'Rodriguez', '5523164288', '456 Tested Ave.', 'Tester', 'TS', '67890');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Jacqueline', 'Romero', '5534668497', '789 W. Test Rd.', 'Approved', 'TS', '54721');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Jesse', 'Nava', '5521224558', '109 E. Testing Way', 'Testing', 'TS', '87534');
+INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Jack', 'Cervantes', '5519814312', '22 Tester Rd.', 'Tests', 'TS', '38943');
 
 CREATE TABLE petProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -39,14 +42,17 @@ CREATE TABLE servicesProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   firstName varchar(255) NOT NULL,
   lastName varchar (255) NOT NULL,
-  phoneNumber CHAR(20) NOT NULL,
-  address TEXT,
+  phoneNumber char(20) NOT NULL,
+  streetAddress TEXT,
+  city varchar (255),
+  state varchar(255),
+  zipCode char (50),
   businessName varchar(255) NOT NULL,
   businessType varchar(255) NOT NULL
 );
 
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Norma', 'Martinez', '5540204972', '123 Test St., Testing, TS, 12345', 'Fly Pet', 'Pet Groomer');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Liz', 'Tapia', '5523169836', '456 Tested Ave., Tester, TS,67890', 'Pet Nanny 911', 'Pet Sitter');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd., Approved, TS, 54721', 'Healthy Pet', 'Veterinary');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way, Testing, TS, 87534', 'Distresser', 'Dog Walker');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, address, businessName, businessType) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd., Tests, TS, 38943', 'Pet Doctor', 'Veterinary');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Norma', 'Martinez', '5540204972', '123 Test St.', 'Testing', 'TS', '12345', 'Fly Pet', 'Pet Groomer');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Liz', 'Tapia', '5523169836', '456 Tested Ave.', 'Tester', 'TS', '67890', 'Pet Nanny 911', 'Pet Sitter');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd.', 'Approved', 'TS', '54721', 'Healthy Pet', 'Veterinary');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way', 'Testing', 'TS', '87534', 'Distresser', 'Dog Walker');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd.', 'Tests', 'TS', '38943', 'Pet Doctor', 'Veterinary');
