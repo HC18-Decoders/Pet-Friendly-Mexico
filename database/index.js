@@ -15,8 +15,6 @@ const getVetProfiles = function() {
 };
 
 
-<<<<<<< HEAD
-=======
 const getPetProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM petProfiles', (err, data) => {
@@ -27,7 +25,6 @@ const getPetProfiles = function() {
     })
   })
 };
->>>>>>> 72caff336d0e2b57eae768ca19d5c11fcd2ae451
 
 
 const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {
@@ -43,23 +40,6 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, address,
 };
 
 
-<<<<<<< HEAD
-const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDescription) {
- return new Promise((resolve, reject) => {
-   connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES (?, ?, ?, ?, ?, ?)',
-   [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
-     if(err) {
-       return reject(err);
-     }
-     return resolve(data);
-   })
- })
-};
-
-
-module.exports = {
-  getVetProfiles,
-=======
 
 const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDescription) {
  return new Promise((resolve, reject) => {
@@ -76,7 +56,6 @@ const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDe
 module.exports = {
   getVetProfiles,
   getPetProfiles,
->>>>>>> 72caff336d0e2b57eae768ca19d5c11fcd2ae451
   postServicesProfiles,
   postPetProfile
 };

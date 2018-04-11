@@ -50,9 +50,5 @@ exports.postSinglePetProfile = (req, res) => {
   .then(data => {
     res.status(200).send(data)
   })
-<<<<<<< HEAD
   .catch(err => { console.log(err) })
 }
-=======
-};
->>>>>>> 72caff336d0e2b57eae768ca19d5c11fcd2ae451
