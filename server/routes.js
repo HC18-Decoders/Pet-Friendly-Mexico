@@ -28,10 +28,13 @@ exports.postSingleServiceProfile = (req, res) => {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
   var phoneNumber = req.body.phoneNumber;
-  var address = req.body.address;
+  var streetAddress = req.body.streetAddress;
+  var city = req.body.city;
+  var state = req.body.state;
+  var zipCode = req.body.zip
   var businessName = req.body.businessName;
   var businessType = req.body.businessType;
-  db.postServicesProfiles(firstName, lastName, phoneNumber, address, businessName, businessType)
+  db.postServicesProfiles(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType)
   .then(data => {
     res.status(200).send(data)
   })

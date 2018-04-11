@@ -14,19 +14,25 @@ export default class Services extends React.Component {
         firstName: '',
         lastName: '',
         phoneNumber: '',
-        address: '',
+        streetAddress: '',
+        city: '',
+        state: '',
+        zipCode: '',
         businessName: '',
         businessType: ''
       };
     };
 
 
-    postVetProfiles(firstName, lastName, phoneNumber, address) {
+    postVetProfiles(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) {
       axios.post('/', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
-        address: address
+        streetAddress: streetAddress,
+        city: city,
+        state: state,
+        zipCode: zipCode
       })
       .then(() => {
         this.postVetProfiles();
@@ -68,8 +74,20 @@ export default class Services extends React.Component {
         floatingLabelText="Telefono" colors="darkBlack" />
     </div>
     <div>
-      <TextField title="address" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
-        floatingLabelText="Domicilio" />
+      <TextField title="streetAddress" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Calle y Numero" />
+    </div>
+    <div>
+      <TextField title="city" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Ciudad" />
+    </div>
+    <div>
+      <TextField title="state" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Estado o Provincia" />
+    </div>
+    <div>
+      <TextField title="zipCode" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
+        floatingLabelText="Codigo Postal" />
     </div>
     <div>
       <TextField title="businessName" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
