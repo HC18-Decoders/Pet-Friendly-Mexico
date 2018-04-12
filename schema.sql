@@ -4,24 +4,6 @@ CREATE DATABASE profiles;
 
 use profiles;
 
-
-CREATE TABLE vetProfiles(
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  firstName varchar(255) NOT NULL,
-  lastName varchar(255) NOT NULL,
-  phoneNumber char(20) NOT NULL,
-  streetAddress TEXT,
-  city varchar(255),
-  state varchar(255),
-  zipCode char(50)
-);
-
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Marcella', 'Torres', '5540208533', '123 Test St.', 'Testing', 'TS', '12345');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Alenjandro', 'Rodriguez', '5523164288', '456 Tested Ave.', 'Tester', 'TS', '67890');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Jacqueline', 'Romero', '5534668497', '789 W. Test Rd.', 'Approved', 'TS', '54721');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Jesse', 'Nava', '5521224558', '109 E. Testing Way', 'Testing', 'TS', '87534');
-INSERT INTO vetProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) VALUES ('Jack', 'Cervantes', '5519814312', '22 Tester Rd.', 'Tests', 'TS', '38943');
-
 CREATE TABLE petProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   petName varchar(255) NOT NULL,

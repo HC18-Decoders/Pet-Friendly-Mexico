@@ -23,7 +23,7 @@ export default class UserProfile extends React.Component {
                           this.state.vaccines,
                           this.state.dewormed,
                           this.state.smallDescription)
-
+}
     componentDidMount() {
       this.getPetProfiles();
     }

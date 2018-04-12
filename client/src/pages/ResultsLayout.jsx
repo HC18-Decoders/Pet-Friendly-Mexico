@@ -7,7 +7,7 @@ const ResultsLayout = (props) => (
     <div>
       <h1 style={{color: "purple"}}> Results </h1>
     </div>
-    <ResultsList vets={props.data.vets} match={props.match}/>
+    <ResultsList vets={props.vets} match={props.match}/>
   </div>
 )
 
