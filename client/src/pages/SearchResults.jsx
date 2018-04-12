@@ -21,7 +21,7 @@ export default class SearchResults extends React.Component {
   getVet() {
     axios.get('/searchresults')
       .then(data => {
-        this.setState({vet: data[0]});
+        this.setState({vets: data.data});
       })
       .catch(error => {
         console.log(error);

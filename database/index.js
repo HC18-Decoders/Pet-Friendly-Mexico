@@ -5,7 +5,7 @@ const connection = mysql.createConnection(mysqlConfig);
 
 const getVetProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfiles', (err, data) => {
+    connection.query('SELECT * FROM servicesProfiles', (err, data) => {
       if(err) {
         return reject(err);
       }
