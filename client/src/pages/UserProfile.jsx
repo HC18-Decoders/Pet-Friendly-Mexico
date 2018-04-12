@@ -24,6 +24,7 @@ export default class UserProfile extends React.Component {
                           this.state.dewormed,
                           this.state.smallDescription)
 }
+
     componentDidMount() {
       this.getPetProfiles();
     }

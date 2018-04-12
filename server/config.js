@@ -11,7 +11,8 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 
 
-app.get('/results', route.getVet)
+app.get('/results', route.getService)
+
 app.get('/profile', route.getPet)
 
 // app.get('/profile?:id', route.getProfile)
