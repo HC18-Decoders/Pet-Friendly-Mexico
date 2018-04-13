@@ -4,10 +4,11 @@ import ResultsList from "../components/ResultsList.jsx";
 
 const ResultsLayout = (props) => (
   <div>
+    {console.log(props.vets)}
     <div>
       <h1 style={{color: "purple"}}> Results </h1>
     </div>
-    <ResultsList vets={props.data.vets} match={props.match}/>
+    <ResultsList vets={props.vets} match={props.match}/>
   </div>
 )
 

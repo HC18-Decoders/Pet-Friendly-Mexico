@@ -3,9 +3,9 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-const getVetProfiles = function() {
+const getServicesProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM vetProfiles', (err, data) => {
+    connection.query('SELECT * FROM servicesProfiles', (err, data) => {
       if(err) {
         return reject(err);
       }
@@ -27,7 +27,7 @@ const getPetProfile = function() {
 
 const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {
  return new Promise((resolove, reject) => {
-   connection.query('INSERT INTO servicesProfiles(firstName, lastName, phoneNumber, address, businessName, businessType) VALUES (?, ?, ?, ?, ?, ?)',
+   connection.query('INSERT INTO servicesProfiles(first_name, last_name, phone_number, address, business_name, business_type) VALUES (?, ?, ?, ?, ?, ?)',
      [firstName, lastName, phoneNumber, address, businessName, businessType], (err, data) => {
        if(err) {
          return reject(err);
@@ -39,7 +39,7 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, address,
 
 const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDescription) {
   return new Promise((resolve, reject) => {
-    connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES (?, ?, ?, ?, ?, ?)',
+    connection.query('INSERT INTO petProfiles(pet_name, age, breed, vaccines, dewormed, small_description) VALUES (?, ?, ?, ?, ?, ?)',
     [petName, age, breed, vaccines, dewormed, smallDescription], (err, data) => {
       if(err) {
         return reject(err);
@@ -56,7 +56,7 @@ const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDe
 
 
 module.exports = {
-  getVetProfiles,
+  getServicesProfiles,
   getPetProfile,
   postServicesProfiles,
   postPetProfile

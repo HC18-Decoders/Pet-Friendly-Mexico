@@ -1,12 +1,11 @@
 const db = require('../database/index.js');
 const url = require('url');
 const path = require('path');
-const bodyParser = require ('body-parser');
 
 //GET requests
 
 exports.getVet = (req, res) => {
-  db.getVetProfiles()
+  db.getServicesProfiles()
     .then(data => {
       res.status(200).send(data)
     })
@@ -25,12 +24,12 @@ exports.getPet = (req, res) => {
 //POST requests
 
 exports.postSingleServiceProfile = (req, res) => {
-  var firstName = req.body.firstName;
-  var lastName = req.body.lastName;
-  var phoneNumber = req.body.phoneNumber;
-  var address = req.body.address;
-  var businessName = req.body.businessName;
-  var businessType = req.body.businessType;
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
+  let phoneNumber = req.body.phoneNumber;
+  let address = req.body.address;
+  let businessName = req.body.businessName;
+  let businessType = req.body.businessType;
   db.postServicesProfiles(firstName, lastName, phoneNumber, address, businessName, businessType)
   .then(data => {
     res.status(200).send(data)

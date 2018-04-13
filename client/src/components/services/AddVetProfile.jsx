@@ -14,12 +14,17 @@ class AddVetProfile extends React.Component{
      firstName: '',
      lastName: '',
      phoneNumber: '',
-     address: ''
+     address: '',
+     businessName: '',
+     businessType: ''
   }
   this.updateFirstName = this.updateFirstName.bind(this);
   this.updateLastName = this.updateLastName.bind(this);
   this.updatePhoneNumber = this.updatePhoneNumber.bind(this);
   this.updateAdress = this.updateAdress.bind(this);
+  this.updateBusinessName = this.updateBusinessName.bind(this);
+  this.updateBusinessType = this.updateBusinessType.bind(this);
+  this.addNewServiceProfile = this.addNewServiceProfile.bind(this);
  }
 
  updateFirstName(event){
@@ -46,15 +51,29 @@ class AddVetProfile extends React.Component{
    })
  }
 
+ updateBusinessName(event){
+   this.setState({
+     businessName: event.target.value
+   })
+ }
+
+ updateBusinessType(event){
+   this.setState({
+     businessType: event.target.value
+   })
+ }
 
 
-  addNewProfile(){
-    this.props.postVetProfiles(this.state.firstName, this.state.lastName, this.state.phoneNumber, this.state.address);
+
+  addNewServiceProfile(){
+    this.props.postVetProfiles(this.state.firstName, this.state.lastName, this.state.phoneNumber, this.state.address, this.state.businessName, this.state.businessType);
     this.setState({
       firstName: '',
       lastName: '',
       phoneNumber: '',
-      address: ''
+      address: '',
+      businessName: '',
+      businessType: ''
     })
   }
 
@@ -72,7 +91,6 @@ class AddVetProfile extends React.Component{
         <TextField title="firstName"
                    onChange={this.updateFirstName}
                    underlineStyle={{white}}
-                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Nombre" />
       </div>
@@ -80,7 +98,6 @@ class AddVetProfile extends React.Component{
         <TextField title="lastName"
                    onChange={this.updateLastName}
                    underlineStyle={{white}}
-                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Apellido"  />
       </div>
@@ -88,7 +105,6 @@ class AddVetProfile extends React.Component{
         <TextField title="phoneNumber"
                    onChange={this.updatePhoneNumber}
                    underlineStyle={{white}}
-                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Telefono"
                    colors="darkBlack" />
@@ -97,12 +113,25 @@ class AddVetProfile extends React.Component{
         <TextField title="address"
                    onChange={this.updateAdress}
                    underlineStyle={{white}}
-                   fulllength='true'
                    style={{color:darkBlack}}
                    floatingLabelText="Domicilio" />
       </div>
       <div>
-        <FlatButton onClick={this.addNewProfile}
+        <TextField title="businessName"
+                   onChange={this.updateBusinessName}
+                   underlineStyle={{white}}
+                   style={{color:darkBlack}}
+                   floatingLabelText="Nombre del Lugar" />
+      </div>
+      <div>
+        <TextField title="businessType"
+                   onChange={this.updateBusinessType}
+                   underlineStyle={{white}}
+                   style={{color:darkBlack}}
+                   floatingLabelText="Tipo de Servicio" />
+      </div>
+      <div>
+        <FlatButton onClick={this.addNewServiceProfile}
                     label="Ingresar"
                     style={{color: darkBlack}} />
       </div>

@@ -3,6 +3,7 @@ import React from 'react';
 import Avatar from 'material-ui/Avatar';
 import FontIcon from 'material-ui/FontIcon';
 import {darkBlack, white} from 'material-ui/styles/colors';
+import Snackbar from 'material-ui/Snackbar';
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -16,7 +17,10 @@ class AddPetProfile extends React.Component{
      breed: '',
      vaccines: '',
      dewormed: '',
-     smallDescription: ''
+     smallDescription: '',
+     autoHideDuration: 4000,
+     message: 'Ha creado su perfil',
+     open: false
   }
   this.updatePetName = this.updatePetName.bind(this);
   this.updateAge = this.updateAge.bind(this);
@@ -24,6 +28,10 @@ class AddPetProfile extends React.Component{
   this.updateVaccines = this.updateVaccines.bind(this);
   this.updateDewormed = this.updateDewormed.bind(this);
   this.updateSmallDescription = this.updateSmallDescription.bind(this);
+  this.handleClick = this.handleClick.bind(this);
+  this.handleChangeDuration = this.handleChangeDuration.bind(this);
+  this.handleRequestClose = this.handleRequestClose.bind(this);
+  this.addNewProfile = this.addNewProfile.bind(this);
  }
 
  updatePetName(event){
@@ -62,10 +70,8 @@ class AddPetProfile extends React.Component{
    })
  }
 
-
-
   addNewProfile(){
-    this.props.insertPetProfile(this.state.petName, this.state.age,
+    this.props.postPetProfile(this.state.petName, this.state.age,
        this.state.breed, this.state.vaccines, this.state.dewormed, this.state.smallDescription);
     this.setState({
       petName: '',
@@ -75,6 +81,25 @@ class AddPetProfile extends React.Component{
       dewormed: '',
       smallDescription: ''
     })
+  }
+
+  handleClick() {
+    this.setState({
+      open: true,
+    });
+  };
+
+  handleChangeDuration(event) {
+    const value = event.target.value;
+    this.setState({
+      autoHideDuration: value.length > 0 ? parseInt(value) : 0,
+    });
+  };
+
+  handleRequestClose(){
+    this.setState({
+      open: false,
+    });
   }
 
  render() {
@@ -134,6 +159,14 @@ class AddPetProfile extends React.Component{
                       label="Submit"
                       onClick={this.addNewProfile}
                       style={{left: 680, color: white}} />
+        </div>
+        <div>
+          <Snackbar
+            open={this.state.open}
+            message="This job was posted!"
+            autoHideDuration={4000}
+            onRequestClose={this.handleRequestClose}
+          />
         </div>
       </div>
     );
