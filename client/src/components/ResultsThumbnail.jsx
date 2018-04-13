@@ -10,14 +10,21 @@ const ResultsThumbnail = (props) => (
       </CardMedia>
       <CardTitle title= {`${props.vet.firstName}`} subtitle={`${props.vet.lastName}`} />
    <CardText>
-     </CardText>
+
   <div style={{color: "black"}}>
     <Link to={`${props.match.url}/${props.vet.id}`}>
     </Link>
-      <span style={{color: "black"}} id="vetsFN">
-        {`${props.vet.phoneNumber} ${props.vet.streetAddress} ${props.vet.zipCode} ${props.vet.state} ${props.vet.city} ${props.vet.businessType}`}
+      <span style={{color: "black", display: "block"}} id="vetsFN">
+        <ul>
+        {`Numero ${props.vet.phoneNumber}
+        Dirección  ${props.vet.streetAddress}
+        Ciudad ${props.vet.city}
+        Estado ${props.vet.state}
+        Codigo Postal ${props.vet.zipCode}   `}
+      </ul>
       </span>
   </div>
+  </CardText>
   </Card>
 );
 

@@ -81,6 +81,12 @@ h1 {
 }
 
 
+.resultsback{
+  position: static;
+  background-color: black;
+}
+
+
 /*Footer element ends here DO NOT TOUCH*/
 
 /*Main Page ends here*/
@@ -91,4 +97,5 @@ h1 {
   color: white;
   font-style: italic;
   font-size: 18px;
+  
 }
