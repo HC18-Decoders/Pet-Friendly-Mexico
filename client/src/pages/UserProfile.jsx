@@ -11,7 +11,6 @@ export default class UserProfile extends React.Component {
       this.state = {
         pet: []
       }
-      this.getPetProfiles = this.getPetProfiles.bind(this);
       this.postPetProfile = this.postPetProfile.bind(this);
     }
 
@@ -26,19 +25,8 @@ export default class UserProfile extends React.Component {
 }
 
     componentDidMount() {
-      this.getPetProfiles();
+      this.postPetProfile();
     }
-
-    getPetProfiles() {
-      axios.get('/profile')
-        .then(data => {
-          this.setState({pet: data[0]})
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-
 
     postPetProfile(petName, age, breed, vaccines, dewormed, smallDescription) {
       axios.post('/profile', {
@@ -49,10 +37,12 @@ export default class UserProfile extends React.Component {
         dewormed : dewormed,
         smallDescription : smallDescription
         })
-        .then(() => {
-          this.getPetProfiles()
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
         })
       }
+
 
       render() {
         return (
