@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Avatar from 'material-ui/Avatar';
+//import Avatar from 'material-ui/Avatar';
 import FontIcon from 'material-ui/FontIcon';
 import {darkBlack, white} from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
@@ -80,62 +80,63 @@ class AddVetProfile extends React.Component{
  render() {
     return (
       <div>
-        <div>
-        <Avatar
-          icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
-          size={250}
-          position="right"
-        />
-      </div>
-      <div>
         <TextField title="firstName"
                    onChange={this.updateFirstName}
                    underlineStyle={{white}}
-                   style={{color:darkBlack}}
+                   fulllength='true'
+                   style={{color:darkBlack, left:500}}
+
                    floatingLabelText="Nombre" />
-      </div>
-      <div>
+                 <br/>
         <TextField title="lastName"
                    onChange={this.updateLastName}
                    underlineStyle={{white}}
-                   style={{color:darkBlack}}
+                   fulllength='true'
+                   style={{color:darkBlack, left:500}}
+
                    floatingLabelText="Apellido"  />
-      </div>
-      <div>
+      <br/>
         <TextField title="phoneNumber"
                    onChange={this.updatePhoneNumber}
                    underlineStyle={{white}}
-                   style={{color:darkBlack}}
+                   fulllength='true'
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Telefono"
                    colors="darkBlack" />
-      </div>
-      <div>
-        <TextField title="address"
-                   onChange={this.updateAdress}
+      <br/>
+        <TextField title="streetAddress"
+                   onChange={this.updateStreetAdress}
                    underlineStyle={{white}}
-
-                   style={{color:darkBlack}}
+                   fullLength={true}
+                   style={{color:darkBlack, left:500}}
+                   floatingLabelText="Calle y Numero" />
+      <br/>
+        <TextField title="city"
+                   onChange={this.updateCity}
+                   underlineStyle={{white}}
+                   fullLength={true}
+                   style={{color:darkBlack, left:500}}
+                   floatingLabelText="Ciudad" />
+      <br/>
+        <TextField title="state"
+                   onChange={this.updateState}
+                   underlineStyle={{white}}
+                   fullLength={true}
+                   style={{color:darkBlack, left:500}}
+                   floatingLabelText="Estado o Provincia" />
+      <br/>
+        <TextField title="zipCode"
+                   onChange={this.updateZipCode}
+                   underlineStyle={{white}}
+                   fullLength={true}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Codigo Postal" />
-      </div>
-      <div>
-        <TextField title="businessName"
-                   onChange={this.updateBusinessName}
-                   underlineStyle={{white}}
-                   style={{color:darkBlack}}
-                   floatingLabelText="Nombre del Lugar" />
-      </div>
-      <div>
-        <TextField title="businessType"
-                   onChange={this.updateBusinessType}
-                   underlineStyle={{white}}
-                   style={{color:darkBlack}}
-                   floatingLabelText="Tipo de Servicio" />
-      </div>
-      <div>
-        <FlatButton onClick={this.addNewServiceProfile}
+      <br/>
+        <FlatButton onClick={this.addNewProfile}
+
                     label="Ingresar"
-                    style={{color: darkBlack}} />
-      </div>
+                    style={{color: darkBlack, left:600}} />
+
       </div>
     );
   }
