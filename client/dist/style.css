@@ -37,6 +37,7 @@ h1 {
   color: white;
   text-align: center;
 }
+
 .hi{
   font-size: 35px;
   color: white;
@@ -89,7 +90,5 @@ h1 {
 #vetsFN {
   color: white;
   font-style: italic;
-  font-size: 30px;
-  text-decoration: underline;
-  outline: thin ridge green;
+  font-size: 18px;
 }
