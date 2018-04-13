@@ -16,11 +16,11 @@ const ResultsThumbnail = (props) => (
     </Link>
       <span style={{color: "black", display: "block"}} id="vetsFN">
         <ul>
-        {`Numero ${props.vet.phoneNumber}
-        Dirección  ${props.vet.streetAddress}
-        Ciudad ${props.vet.city}
-        Estado ${props.vet.state}
-        Codigo Postal ${props.vet.zipCode}   `}
+        {`Numero : ${props.vet.phoneNumber}||
+        Dirección :  ${props.vet.streetAddress}||
+        Estado : ${props.vet.state}||
+        Ciudad : ${props.vet.city} ||
+        Codigo Postal : ${props.vet.zipCode} `}
       </ul>
       </span>
   </div>

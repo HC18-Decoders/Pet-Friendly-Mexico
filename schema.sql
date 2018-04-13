@@ -33,8 +33,6 @@ CREATE TABLE servicesProfiles(
   businessType varchar(255) NOT NULL
 );
 
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Norma', 'Martinez', '5540204972', '123 Test St.', 'Testing', 'TS', '12345', 'Fly Pet', 'Pet Groomer');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Liz', 'Tapia', '5523169836', '456 Tested Ave.', 'Tester', 'TS', '67890', 'Pet Nanny 911', 'Pet Sitter');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd.', 'Approved', 'TS', '54721', 'Healthy Pet', 'Veterinary');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way', 'Testing', 'TS', '87534', 'Distresser', 'Dog Walker');
-INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd.', 'Tests', 'TS', '38943', 'Pet Doctor', 'Veterinary');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('David', 'Martinez', '01 55 5359 3576', 'Abraham Sánchez 112, San Pedro Xalpa', 'Azcapotzalco', 'CDMX', '02719', 'Veterinaria San Pedro', 'Veterinaria');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Miguel', 'Lopez', '01 55 5382 0587', 'rivada Antigua Calzada de Guadalupe 3', 'Azcapotzalco', 'CDMX', '02719', 'VALMAR', 'VETERINARY');
+INSERT INTO servicesProfiles (firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) VALUES ('Carlos', 'Real', '5534668048', 'Adrian Castrejón 180-182', 'San Pedro Xalpa', 'CDMX', '02719', 'Reals Bulldogs', 'Veterinaria/Criador');
