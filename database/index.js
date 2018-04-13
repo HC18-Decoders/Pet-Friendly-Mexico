@@ -15,7 +15,7 @@ const getServicesProfiles = function() {
 };
 
 
-const getPetProfiles = function() {
+const getPetProfile = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM petProfiles', (err, data) => {
       if(err){
