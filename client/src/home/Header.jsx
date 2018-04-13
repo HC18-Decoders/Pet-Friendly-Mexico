@@ -69,8 +69,8 @@ export default class Header extends React.Component {
                       width={200}
                       open={this.state.open}
                       onRequestChange={(open) => this.setState({open})}>
-              <Link to='/servicesprofile'><MenuItem onClick={this.handleClose}>Create Service Profile</MenuItem></Link>
-              <Link to='/userprofile'><MenuItem onClick={this.handleClose}>Create User Profile</MenuItem></Link>
+              <Link to='/servicesprofile'><MenuItem onClick={this.handleClose}>Crear Perfil de Servicio</MenuItem></Link>
+              <Link to='/userprofile'><MenuItem onClick={this.handleClose}>Crear Perfil de Usuario</MenuItem></Link>
             </Drawer>
             </div>
             <Link to='/'><ToolbarTitle

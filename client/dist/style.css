@@ -37,6 +37,7 @@ h1 {
   color: white;
   text-align: center;
 }
+
 .hi{
   font-size: 35px;
   color: white;
@@ -79,13 +80,6 @@ h1 {
   attachment: fixed;
 }
 
-.drawer {
-  background-color: #00000;
-  color: black;
-}
-.overlayImg{
-
-}
 
 /*Footer element ends here DO NOT TOUCH*/
 

@@ -81,30 +81,25 @@ class AddPetProfile extends React.Component{
     return (
       <div>
         <div>
-          <Avatar
-          icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
-          size={250}
-          />
-        </div>
-        <div>
           <TextField title="petName"
                      onChange={this.updatePetName}
                      underlineStyle={{white}}
-                     style={{color:darkBlack, left:180}}
+                     style={{color:darkBlack, left:500}}
                      floatingLabelText="Nombre de Mascota" />
         </div>
         <div>
           <TextField title="age"
                      onChange={this.updateAge}
                      underlineStyle={{white}}
-                     style={{color:darkBlack}}
+                     style={{color:darkBlack, left:500}}
                      floatingLabelText="Edad"  />
         </div>
         <div>
+          <br/>
           <TextField title="breed"
                      onChange={this.updateBreed}
                      underlineStyle={{white}}
-                     style={{color:darkBlack}}
+                     style={{color:darkBlack, left:500}}
                      floatingLabelText="Raza"
                      colors="darkBlack" />
         </div>
@@ -112,28 +107,28 @@ class AddPetProfile extends React.Component{
           <TextField title="vaccines"
                      onChange={this.updateVaccines}
                      underlineStyle={{white}}
-                     style={{color:darkBlack}}
+                     style={{color:darkBlack, left:500}}
                      floatingLabelText="Vacunas" />
         </div>
         <div>
           <TextField title="dewormed"
                      onChange={this.updateDewormed}
                      underlineStyle={{white}}
-                     style={{color:darkBlack}}
+                     style={{color:darkBlack, left:500}}
                      floatingLabelText="Desparasitado(a)?" />
         </div>
         <div>
           <TextField title="smallDescription"
                      onChange={this.updateSmallDescription}
                      underlineStyle={{white}}
-                     style={{color:darkBlack}}
+                     style={{color:darkBlack, left:500}}
                      floatingLabelText="Descripción" />
         </div>
         <div>
           <FlatButton className="submitProf"
                       label="Submit"
                       onClick={this.addNewProfile}
-                      style={{left: 680, color: white}} />
+                      style={{left: 600, color: white}} />
         </div>
       </div>
     );
