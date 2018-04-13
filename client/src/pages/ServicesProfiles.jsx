@@ -25,7 +25,7 @@ export default class Services extends React.Component {
 
 
     postVetProfiles(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) {
-      axios.post('/', {
+      axios.post('/servicesprofile', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
@@ -54,13 +54,6 @@ export default class Services extends React.Component {
   render() {
   return (
     <div>
-      <div>
-      <Avatar
-        icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
-        size={250}
-        position="right"
-      />
-    </div>
     <div>
       <TextField title="firstName" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
         floatingLabelText="Nombre" />
@@ -97,7 +90,7 @@ export default class Services extends React.Component {
       <TextField title="businessType" underlineStyle="white" fullLength={true} style={{color:darkBlack}}
         floatingLabelText="Tipo de Negocio" />
     </div>
-    <div>
+    <div id="submit-buttonFor-Service">
       <FlatButton onClick={(e) => this.handleClick(e)} label="Submit" style={{color: darkBlack}} />
     </div>
     </div>

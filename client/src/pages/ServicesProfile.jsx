@@ -53,6 +53,9 @@ export default class ServicesProfile extends React.Component {
           <Header />
         </div>
         <div>
+          <h3 id="profile-text">Add your business here!</h3>
+        </div>
+        <div>
           <AddVetProfile postVetProfile={this.postVetProfile}/>
         </div>
       </div>
