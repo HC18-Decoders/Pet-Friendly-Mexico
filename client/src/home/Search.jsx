@@ -12,14 +12,18 @@ class Search extends React.Component {
       value: '',
       searchResults: []
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  handleClick() {
-
-}
+  handleInputChange(e) {
+    this.props.handleSearchInputChange(e.target.value);
+    this.setState({
+      value: e.target.value
+    });
+  }
 
   render(){
+    const { value } = this.state;
     return(
       <div className="search">
         Búsqueda   <br></br>
@@ -28,7 +32,7 @@ class Search extends React.Component {
                    underlineStyle={{white}}
                    fulllength="true"
                    style={{color:darkBlack}} />
-                 <Link to="/searchresults"><FlatButton onClick={(e) => this.handleClick(e)}
+                 <Link to="/searchresults"><FlatButton onClick={(e) => this.handleInputChange(e)}
                     label="Go!"
                     className="search-button"
                     style={{color:darkBlack}} />
