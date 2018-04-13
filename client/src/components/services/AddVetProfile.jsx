@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Avatar from 'material-ui/Avatar';
+//import Avatar from 'material-ui/Avatar';
 import FontIcon from 'material-ui/FontIcon';
 import {darkBlack, white} from 'material-ui/styles/colors';
 import TextField from 'material-ui/TextField';
@@ -86,75 +86,60 @@ updateZipCode(event){
  render() {
     return (
       <div>
-        <div>
-        <Avatar
-          icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
-          size={250}
-          position="right"
-        />
-      </div>
-      <div>
         <TextField title="firstName"
                    onChange={this.updateFirstName}
                    underlineStyle={{white}}
                    fulllength='true'
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Nombre" />
-      </div>
-      <div>
+                 <br/>
         <TextField title="lastName"
                    onChange={this.updateLastName}
                    underlineStyle={{white}}
                    fulllength='true'
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Apellido"  />
-      </div>
-      <div>
+      <br/>
         <TextField title="phoneNumber"
                    onChange={this.updatePhoneNumber}
                    underlineStyle={{white}}
                    fulllength='true'
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Telefono"
                    colors="darkBlack" />
-      </div>
-      <div>
+      <br/>
         <TextField title="streetAddress"
                    onChange={this.updateStreetAdress}
-                   underlineStyle="white"
+                   underlineStyle={{white}}
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Calle y Numero" />
-      </div>
-      <div>
+      <br/>
         <TextField title="city"
                    onChange={this.updateCity}
-                   underlineStyle="white"
+                   underlineStyle={{white}}
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Ciudad" />
-      </div>
-      <div>
+      <br/>
         <TextField title="state"
                    onChange={this.updateState}
-                   underlineStyle="white"
+                   underlineStyle={{white}}
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Estado o Provincia" />
-      </div>
-      <div>
+      <br/>
         <TextField title="zipCode"
                    onChange={this.updateZipCode}
-                   underlineStyle="white"
+                   underlineStyle={{white}}
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Codigo Postal" />
-      </div>
-      <div>
+      <br/>
         <FlatButton onClick={this.addNewProfile}
                     label="Ingresar"
-                    style={{color: darkBlack}} />
-      </div>
+                    style={{color: darkBlack, left:600}} />
+
       </div>
     );
   }
