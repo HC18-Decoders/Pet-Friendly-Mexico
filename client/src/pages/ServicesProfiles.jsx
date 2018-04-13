@@ -91,7 +91,7 @@ export default class Services extends React.Component {
         floatingLabelText="Tipo de Negocio" />
     </div>
     <div id="submit-buttonFor-Service">
-      <FlatButton onClick={(e) => this.handleClick(e)} label="Submit" style={{color: darkBlack}} />
+      <FlatButton onClick={(e) => this.handleClick(e)} label="Submit" />
     </div>
     </div>
   )
