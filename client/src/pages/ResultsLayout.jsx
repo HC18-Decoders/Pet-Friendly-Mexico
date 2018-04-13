@@ -5,7 +5,7 @@ import ResultsList from "../components/ResultsList.jsx";
 const ResultsLayout = (props) => (
   <div>
     <div>
-      <h1 style={{color: "purple"}}> Results </h1>
+      <h1 style={{color: "white"}}> Results </h1>
     </div>
     <ResultsList vets={props.vets} match={props.match}/>
   </div>

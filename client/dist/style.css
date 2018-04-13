@@ -83,6 +83,9 @@ h1 {
   background-color: #00000;
   color: black;
 }
+.overlayImg{
+
+}
 
 /*Footer element ends here DO NOT TOUCH*/
 
@@ -93,7 +96,5 @@ h1 {
 #vetsFN {
   color: white;
   font-style: italic;
-  font-size: 30px;
-  text-decoration: underline;
-  outline: thin ridge green;
+  font-size: 18px;
 }
