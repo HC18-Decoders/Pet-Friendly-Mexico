@@ -5,8 +5,8 @@ const bodyParser = require ('body-parser');
 
 //GET requests
 
-exports.getVet = (req, res) => {
-  db.getVetProfiles()
+exports.getService = (req, res) => {
+  db.getServicesProfiles()
     .then(data => {
       res.status(200).send(data)
     })

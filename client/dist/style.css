@@ -37,6 +37,7 @@ h1 {
   color: white;
   text-align: center;
 }
+
 .hi{
   font-size: 35px;
   color: white;
@@ -79,10 +80,12 @@ h1 {
   attachment: fixed;
 }
 
+
 .resultsback{
   position: static;
   background-color: black;
 }
+
 
 /*Footer element ends here DO NOT TOUCH*/
 

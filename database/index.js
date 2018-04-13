@@ -3,7 +3,7 @@ const mysqlConfig = require('./config.js');
 const connection = mysql.createConnection(mysqlConfig);
 
 
-const getVetProfiles = function() {
+const getServicesProfiles = function() {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM servicesProfiles', (err, data) => {
       if(err) {
@@ -41,6 +41,8 @@ const postServicesProfiles = function(firstName, lastName, phoneNumber, streetAd
 
 
 
+
+
 const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDescription) {
  return new Promise((resolve, reject) => {
    connection.query('INSERT INTO petProfiles(petName, age, breed, vaccines, dewormed, smallDescription) VALUES(?, ?, ?, ?, ?, ?)',
@@ -54,7 +56,7 @@ const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDe
 };
 
 module.exports = {
-  getVetProfiles,
+  getServicesProfiles,
   getPetProfiles,
   postServicesProfiles,
   postPetProfile
