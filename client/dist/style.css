@@ -79,12 +79,9 @@ h1 {
   attachment: fixed;
 }
 
-.drawer {
-  background-color: #00000;
-  color: black;
-}
-.overlayImg{
-
+.resultsback{
+  position: static;
+  background-color: black;
 }
 
 /*Footer element ends here DO NOT TOUCH*/

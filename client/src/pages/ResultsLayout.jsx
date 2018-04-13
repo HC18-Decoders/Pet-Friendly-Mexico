@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import ResultsList from "../components/ResultsList.jsx";
 
 const ResultsLayout = (props) => (
-  <div>
+  <div className ="resultsback" >
     <div>
       <h1 style={{color: "white"}}> Results </h1>
     </div>

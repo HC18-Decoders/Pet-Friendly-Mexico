@@ -15,7 +15,7 @@ const ResultsThumbnail = (props) => (
     <Link to={`${props.match.url}/${props.vet.id}`}>
     </Link>
       <span style={{color: "black"}} id="vetsFN">
-        {`${props.vet.phoneNumber} ${props.vet.streetAddress} ${props.vet.zipCode} ${props.vet.state} ${props.vet.city} ${props.vet.businessType}`}
+        {`${props.vet.phoneNumber} ${props.vet.streetAddress} ${props.vet.city} ${props.vet.state} ${props.vet.zipCode}   `}
       </span>
   </div>
   </Card>
