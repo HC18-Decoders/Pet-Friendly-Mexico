@@ -45,9 +45,9 @@ class AddVetProfile extends React.Component{
    })
  }
 
- updateStreetAdress(event){
+ updateAdress(event){
    this.setState({
-     streetAddress: event.target.value
+     address: event.target.value
    })
  }
 
@@ -80,12 +80,15 @@ class AddVetProfile extends React.Component{
  render() {
     return (
       <div>
+        <h1 className= "title1">
+          ! Crea Tu Perfil De Servicio¡
+        </h1>
+      <div>
         <TextField title="firstName"
                    onChange={this.updateFirstName}
                    underlineStyle={{white}}
                    fulllength='true'
                    style={{color:darkBlack, left:500}}
-
                    floatingLabelText="Nombre" />
                  <br/>
         <TextField title="lastName"
@@ -136,6 +139,8 @@ class AddVetProfile extends React.Component{
 
                     label="Ingresar"
                     style={{color: darkBlack, left:600}} />
+
+      </div>
 
       </div>
     );
