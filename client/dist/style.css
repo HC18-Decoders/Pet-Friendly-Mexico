@@ -101,3 +101,14 @@ h1 {
   font-size: 18px;
 
 }
+#profile-text{
+  color:white;
+  text-align: center;
+}
+#pet-profile-text{
+  color:white;
+  text-align: center;
+}
+#submit-buttonFor-Service{
+  text-align: center;
+}
