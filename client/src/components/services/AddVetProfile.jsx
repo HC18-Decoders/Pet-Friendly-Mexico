@@ -86,19 +86,15 @@ updateZipCode(event){
  render() {
     return (
       <div>
-        <div>
-        <Avatar
-          icon={<FontIcon className="muidocs-icon-communication-voicemail" />}
-          size={250}
-          position="right"
-        />
-      </div>
+        <h1 className= "title1">
+          ! Crea Tu Perfil De Servicio¡
+        </h1>
       <div>
         <TextField title="firstName"
                    onChange={this.updateFirstName}
                    underlineStyle={{white}}
                    fulllength='true'
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Nombre" />
       </div>
       <div>
@@ -106,7 +102,7 @@ updateZipCode(event){
                    onChange={this.updateLastName}
                    underlineStyle={{white}}
                    fulllength='true'
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Apellido"  />
       </div>
       <div>
@@ -114,7 +110,7 @@ updateZipCode(event){
                    onChange={this.updatePhoneNumber}
                    underlineStyle={{white}}
                    fulllength='true'
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Telefono"
                    colors="darkBlack" />
       </div>
@@ -123,7 +119,7 @@ updateZipCode(event){
                    onChange={this.updateStreetAdress}
                    underlineStyle="white"
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Calle y Numero" />
       </div>
       <div>
@@ -131,7 +127,7 @@ updateZipCode(event){
                    onChange={this.updateCity}
                    underlineStyle="white"
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Ciudad" />
       </div>
       <div>
@@ -139,7 +135,7 @@ updateZipCode(event){
                    onChange={this.updateState}
                    underlineStyle="white"
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Estado o Provincia" />
       </div>
       <div>
@@ -147,13 +143,13 @@ updateZipCode(event){
                    onChange={this.updateZipCode}
                    underlineStyle="white"
                    fullLength={true}
-                   style={{color:darkBlack}}
+                   style={{color:darkBlack, left:500}}
                    floatingLabelText="Codigo Postal" />
       </div>
       <div>
         <FlatButton onClick={this.addNewProfile}
                     label="Ingresar"
-                    style={{color: darkBlack}} />
+                    style={{color: darkBlack, left:600}} />
       </div>
       </div>
     );

@@ -85,7 +85,9 @@ h1 {
   position: static;
   background-color: black;
 }
-
+.title1{
+  margin-left: 280px;
+}
 
 /*Footer element ends here DO NOT TOUCH*/
 
@@ -97,5 +99,5 @@ h1 {
   color: white;
   font-style: italic;
   font-size: 18px;
-  
+
 }
