@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+import {darkBlack, white} from 'material-ui/styles/colors';
 import AddVetProfile from '../components/services/AddVetProfile.jsx';
 import Header from '../home/Header.jsx';
 
@@ -10,38 +11,28 @@ export default class ServicesProfile extends React.Component {
   constructor(props) {
     super(props);
       this.state = {
-        vet: []
+        vets: []
       }
-      this.getVetProfiles = this.getVetProfiles.bind(this);
       this.postVetProfiles = this.postVetProfiles.bind(this);
     }
 
     componentDidMount() {
-      this.getVetProfiles();
+      this.postVetProfiles();
     }
 
-    getVetProfiles(){
-      axios.get('/serviceprofile')
-        .then(data => {
-          this.setState({vet: data[0]});
-        })
-      .catch(error => {
-        console.log(error);
-      });
-    }
-
-    postVetProfiles(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode) {
-      axios.post('/servicesprofile', {
+    postVetProfiles(firstName, lastName, phoneNumber, address, businessName, businessType) {
+      axios.post('/serviceprofile', {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
-        streetAddress: streetAddress,
-        city: city,
-        state: state,
-        zipCode: zipCode
+        address: address,
+        businessName: businessName,
+        businessType: businessType
+
       })
-      .then(() => {
-        this.getVetProfiles();
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
       })
     }
 
@@ -52,8 +43,9 @@ export default class ServicesProfile extends React.Component {
         <div>
           <Header />
         </div>
+        <h3 style={{color:white}}>¡Tu Servicio, Tu Perfil!</h3>
         <div>
-          <AddVetProfile postVetProfile={this.postVetProfile}/>
+          <AddVetProfile postVetProfiles={this.postVetProfiles}/>
         </div>
       </div>
     )
