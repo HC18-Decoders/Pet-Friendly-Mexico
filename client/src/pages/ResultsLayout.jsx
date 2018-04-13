@@ -3,10 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 import ResultsList from "../components/ResultsList.jsx";
 
 const ResultsLayout = (props) => (
-  <div>
-    {console.log(props.vets)}
+
+  <div className ="resultsback" >
     <div>
-      <h1 style={{color: "purple"}}> Results </h1>
+      <h1 style={{color: "white"}}> Results </h1>
     </div>
     <ResultsList vets={props.vets} match={props.match}/>
   </div>

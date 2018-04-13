@@ -14,23 +14,26 @@ const getServicesProfiles = function() {
   })
 };
 
-const getPetProfile = function() {
+
+const getPetProfiles = function() {
   return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM petProfiles'), (err, data) => {
+    connection.query('SELECT * FROM petProfiles', (err, data) => {
       if(err){
-        return reject (err);
+        return reject(err);
       }
       return resolve(data);
-    }
+    })
   })
 };
 
-const postServicesProfiles = function(firstName, lastName, phoneNumber, address, businessName, businessType) {
+
+const postServicesProfiles = function(firstName, lastName, phoneNumber, streetAddress, city, state, zipCode, businessName, businessType) {
  return new Promise((resolove, reject) => {
    connection.query('INSERT INTO servicesProfiles(first_name, last_name, phone_number, address, business_name, business_type) VALUES (?, ?, ?, ?, ?, ?)',
      [firstName, lastName, phoneNumber, address, businessName, businessType], (err, data) => {
+
        if(err) {
-         return reject(err);
+          return reject(err);
        }
        return resolve(data);
      })
@@ -48,8 +51,6 @@ const postPetProfile = function(petName, age, breed, vaccines, dewormed, smallDe
     })
   })
 };
-
-
 
 
 

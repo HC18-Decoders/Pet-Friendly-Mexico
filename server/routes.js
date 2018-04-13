@@ -5,6 +5,7 @@ const path = require('path');
 //GET requests
 
 exports.getVet = (req, res) => {
+
   db.getServicesProfiles()
     .then(data => {
       res.status(200).send(data)
@@ -20,7 +21,6 @@ exports.getPet = (req, res) => {
     })
     .catch(err => { console.log(err) })
 }
-
 //POST requests
 
 exports.postSingleServiceProfile = (req, res) => {
@@ -36,6 +36,7 @@ exports.postSingleServiceProfile = (req, res) => {
   })
   .catch(err => { console.log(err) })
 }
+
 
 
 exports.postSinglePetProfile = (req, res) => {

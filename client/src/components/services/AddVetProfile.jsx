@@ -45,9 +45,9 @@ class AddVetProfile extends React.Component{
    })
  }
 
- updateAdress(event){
+ updateStreetAdress(event){
    this.setState({
-     address: event.target.value
+     streetAddress: event.target.value
    })
  }
 
@@ -64,9 +64,9 @@ class AddVetProfile extends React.Component{
  }
 
 
-
   addNewServiceProfile(){
     this.props.postVetProfiles(this.state.firstName, this.state.lastName, this.state.phoneNumber, this.state.address, this.state.businessName, this.state.businessType);
+
     this.setState({
       firstName: '',
       lastName: '',
@@ -113,8 +113,9 @@ class AddVetProfile extends React.Component{
         <TextField title="address"
                    onChange={this.updateAdress}
                    underlineStyle={{white}}
+
                    style={{color:darkBlack}}
-                   floatingLabelText="Domicilio" />
+                   floatingLabelText="Codigo Postal" />
       </div>
       <div>
         <TextField title="businessName"

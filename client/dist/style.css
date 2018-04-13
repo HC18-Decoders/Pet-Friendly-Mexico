@@ -24,7 +24,7 @@ h1 {
 
 .logOut {
   font-size: 28px;
-  position: static;
+  position: fixed;
   padding: 0;
   color: white;
   text-align: center;
@@ -36,6 +36,11 @@ h1 {
   padding: 0;
   color: white;
   text-align: center;
+}
+
+.hi{
+  font-size: 35px;
+  color: white;
 }
 
 
@@ -75,10 +80,12 @@ h1 {
   attachment: fixed;
 }
 
-.drawer {
-  background-color: #00000;
-  color: black;
+
+.resultsback{
+  position: static;
+  background-color: black;
 }
+
 
 /*Footer element ends here DO NOT TOUCH*/
 
@@ -89,7 +96,6 @@ h1 {
 #vetsFN {
   color: white;
   font-style: italic;
-  font-size: 30px;
-  text-decoration: underline;
-  outline: thin ridge green;
+  font-size: 18px;
+  
 }

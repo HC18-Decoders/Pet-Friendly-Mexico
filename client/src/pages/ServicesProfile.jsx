@@ -28,6 +28,7 @@ export default class ServicesProfile extends React.Component {
         address: address,
         businessName: businessName,
         businessType: businessType
+
       })
       .then(res => {
         console.log(res);

@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import {darkBlack, white} from 'material-ui/styles/colors';
+import {darkBlack, black} from 'material-ui/styles/colors';
 import Header from '../home/Header.jsx';
 import AddPetProfile from '../components/user/AddPetProfile.jsx';
 
@@ -13,6 +13,16 @@ export default class UserProfile extends React.Component {
       }
       this.postPetProfile = this.postPetProfile.bind(this);
     }
+
+
+    add() {
+      this.props.addInput(this.state.petName,
+                          this.state.age,
+                          this.state.breed,
+                          this.state.vaccines,
+                          this.state.dewormed,
+                          this.state.smallDescription)
+}
 
     componentDidMount() {
       this.postPetProfile();
@@ -40,7 +50,7 @@ export default class UserProfile extends React.Component {
             <div>
               <Header />
             </div>
-            <h3 style={{color:white}}>¡Crea el perfil de tu Mascota!</h3>
+            <h3 style={{color:black}}>¡Crea el perfil de tu Mascota!</h3>
             <div>
               <AddPetProfile postPetProfile={this.postPetProfile}/>
             </div>

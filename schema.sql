@@ -19,6 +19,7 @@ INSERT INTO vetProfiles (first_name, last_name, phone_number, address) VALUES ('
 INSERT INTO vetProfiles (first_name, last_name, phone_number, address) VALUES ('Jesse', 'Nava', '5521224558', '109 E. Testing Way, Testing, TS, 87534');
 INSERT INTO vetProfiles (first_name, last_name, phone_number, address) VALUES ('Jack', 'Cervantes', '5519814312', '22 Tester Rd., Tests, TS, 38943');
 
+
 CREATE TABLE petProfiles(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   pet_name varchar(255) NOT NULL,
@@ -50,3 +51,4 @@ INSERT INTO servicesProfiles (first_name, last_name, phone_number, address, busi
 INSERT INTO servicesProfiles (first_name, last_name, phone_number, address, business_name, business_type) VALUES ('Javier', 'Arciniega', '5534668048', '789 W. Test Rd., Approved, TS, 54721', 'Healthy Pet', 'Veterinary');
 INSERT INTO servicesProfiles (first_name, last_name, phone_number, address, business_name, business_type) VALUES ('Daniel', 'Trejo', '5521221235', '109 E. Testing Way, Testing, TS, 87534', 'Distresser', 'Dog Walker');
 INSERT INTO servicesProfiles (first_name, last_name, phone_number, address, business_name, business_type) VALUES ('Ricardo', 'Meza', '5519819487', '22 Tester Rd., Tests, TS, 38943', 'Pet Doctor', 'Veterinary');
+
